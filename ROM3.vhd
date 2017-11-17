@@ -16,7 +16,7 @@ architecture behavioral of ROM is
 
 type mem is array (0 to 9) of std_logic_vector(7 downto 0);
 
-constant my_Rom : mem := (
+constant my_rom : mem := (
 	
 	0 => "00110000", -- 30
 	1 => "10111011", -- BB
