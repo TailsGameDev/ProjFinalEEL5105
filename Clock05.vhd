@@ -3,15 +3,14 @@ use ieee.std_logic_1164.all;
 use IEEE.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity Clock25 is
+entity Clock05 is
 	port (
 	CLOCK_50: in std_logic;
-	saida: out std_logic;
-
+	saida: out std_logic );
 end Clock05;
 
-architecture Clock25Arch of Clock25 is 
-	
+architecture Clock05Arch of Clock05 is 
+
 	signal cont: std_logic_vector(27 downto 0);
 	
 begin
@@ -22,7 +21,7 @@ begin
 			cont <= cont+1;
 		
 		
-			if (cont = x"BEBC20") then
+			if (cont = x"17D7840") then
 				cont <= x"0000000";
 				saida <= '1';
 			else
@@ -31,4 +30,4 @@ begin
 		
 	end process;
 
-	end Clock25Arch;
+	end Clock05Arch;

@@ -5,7 +5,6 @@ use ieee.std_logic_1164.all;
 entity ROM is
   port ( 
 	address : in std_logic_vector(3 downto 0);
-
 	data : out std_logic_vector(7 downto 0) );
 
 end entity ROM;

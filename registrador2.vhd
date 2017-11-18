@@ -1,13 +1,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
-entity registrador is port (
+entity registrador2 is port (
 	CLK: in std_logic;
 	EN: in std_logic;
 	RST: in std_logic;
 	ENTRADA: in std_logic_vector(1 downto 0);
 	SAIDA: out std_logic_vector(1 downto 0));
-end registrador;
-architecture behv of registrador is
+end registrador2;
+architecture behv of registrador2 is
 begin
 	process(CLK,RST)
 	begin

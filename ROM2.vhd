@@ -2,17 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 
-entity ROM is
+entity ROM2 is
   port ( 
 	address : in std_logic_vector(3 downto 0);
-
 	data : out std_logic_vector(7 downto 0) );
-
-end entity ROM;
-
+end entity ROM2;
 
 
-architecture behavioral of ROM is
+
+architecture behavioral of ROM2 is
 
 type mem is array (0 to 9) of std_logic_vector(7 downto 0);
 
