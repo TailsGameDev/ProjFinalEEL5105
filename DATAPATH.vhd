@@ -11,7 +11,14 @@ port (    E1: in std_logic;
 	CLOCK_50: in std_logic;
 	  	  SW: in std_logic_vector (9 downto 0);
 	   HEX5: out std_logic_vector (6 downto 0);
-	  	 CG: out std_logic;
+       HEX4: out std_logic_vector (6 downto 0);
+       HEX3: out std_logic_vector (6 downto 0);
+       HEX2: out std_logic_vector (6 downto 0);
+       HEX1: out std_logic_vector (6 downto 0);
+       HEX0: out std_logic_vector (6 downto 0);
+       LEDR: out std_logic_vector (9 downto 0);
+          M: out std_logic;
+	  	 CG: out std_logic
 );
 end DATAPATH;
 
@@ -67,17 +74,6 @@ port (
 );
 end ClockConvert;
 
-	component multiplexador4 is 
-port(
-	  	  entrada: in std_logic_vector(7 downto 0);
-         entrada2: in std_logic_vector(7 downto 0);
-         entrada3: in std_logic_vector(7 downto 0);
-         entrada4: in std_logic_vector(7 downto 0);
-            sinal: in std_logic_vector(1 downto 0);
-           saida: out std_logic_vector(7 downto 0)
-        );
-end multiplexador4;
-
 component multiplexador16 is 
 port(
 		 entrada1: in std_logic_vector(9 downto 0);
@@ -122,7 +118,13 @@ begin
 lplus <= l + '1';
  HEX5 <= "1000111";
 
- --IMPLEMENTAR COMPARADOR DE IGUALDADE E DE MENOR
+ --comparador de menor
+ M <= '1' when (l < "1001") else
+      '0' ;
+
+ --comparador de igualdade
+ E4 <= '1' when (roml = SW(7 downto 0)) else
+       '0';
 
  --registradores
 
@@ -139,7 +141,26 @@ dhex2: decodificador (Fptos (3 downto 0), HEX2);
 dhex1: decodificador ( roml(7 downto 4) , HEX1);
 dhex0: decodificador ( roml(3 downto 0) , HEX0);
 
+-- clock convert
+
+conclock: ClockConvert (CLOCK_50, Nv, CG);
+
+
+ --multiplexador
+
+mux16: multiplexador16 ("1010101010","1010101010","1010101010","1010101010",
+                        "1010101010","1111111111","0111111111","0011111111",
+                        "0001111111","0000111111","0000011111","0000001111",
+                        "0000000111","0000000011","0000000001","0000000000",
+                        Ptos, LEDR(9 downto 0));
+
+--deslocador geral
+
+dg: DeslocadorGeral (Ptos, Nv, Fptos);
+
 --selecionador de memória
+
 selctmem: selecionaRom (ROM, l, roml);
+
 
 end DATAPATHArch;

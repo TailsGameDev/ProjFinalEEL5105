@@ -9,9 +9,8 @@ port ( 	CG: in std_logic;
 		KEY: std_logic_vector (1 downto 0);
 		E1: out std_logic;
 		E2: out std_logic;
-		E4: out std_logic;
+		E3: out std_logic;
 		C: out std_logic;
-		LEDR : out std_logic_vector(9 downto 0)
 	);
 end FSM;
 
@@ -50,7 +49,7 @@ begin
 			E1<='1';
 			E2<='1';
 			E3<='0';
-			C<='1';
+			C<='0';
 			if(KEY(1)='0') then
 				PEstado <= GAME;
 			else
