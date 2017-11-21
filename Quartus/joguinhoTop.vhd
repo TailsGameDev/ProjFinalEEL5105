@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.Std_Logic_1164.all;
 
-entity joguinhoTop is
+entity joguinhoTopper is
 port (
  CLOCK_50: in std_logic;
 	   SW: in std_logic_vector (9 downto 0);
@@ -12,10 +12,11 @@ port (
     HEX2: out std_logic_vector (6 downto 0);
     HEX1: out std_logic_vector (6 downto 0);
     HEX0: out std_logic_vector (6 downto 0);
-    LEDR: out std_logic_vector (9 downto 0));
-end joguinhoTop;
+    LEDR: out std_logic_vector (9 downto 0)
+);
+end joguinhoTopper;
 
-architecture joguinhoTopArch of joguinhoTop is
+architecture joguinhoTopArch of joguinhoTopper is
 
 --signals
 

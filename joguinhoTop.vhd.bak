@@ -12,7 +12,8 @@ port (
     HEX2: out std_logic_vector (6 downto 0);
     HEX1: out std_logic_vector (6 downto 0);
     HEX0: out std_logic_vector (6 downto 0);
-    LEDR: out std_logic_vector (9 downto 0));
+    LEDR: out std_logic_vector (9 downto 0);
+);
 end joguinhoTop;
 
 architecture joguinhoTopArch of joguinhoTop is
@@ -45,7 +46,7 @@ port (    E1: in std_logic;
           M: out std_logic;
 	  	 CG: out std_logic
 );
-end component;
+end DATAPATH;
 
 component FSM is
 port ( 	CG: in std_logic;
@@ -54,9 +55,9 @@ port ( 	CG: in std_logic;
 		E1: out std_logic;
 		E2: out std_logic;
 		E3: out std_logic;
-		C: out std_logic
+		C: out std_logic;
 	);
-end component;
+end FSM;
 
 begin
 

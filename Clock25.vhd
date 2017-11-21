@@ -27,7 +27,7 @@ begin
 			else
 				saida <= '0';
 			end if;
-		
+		end if;
 	end process;
 
 	end Clock25Arch;

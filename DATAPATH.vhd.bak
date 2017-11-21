@@ -47,7 +47,7 @@ signal      roml:    std_logic_vector (7 downto 0);
 	RST: in std_logic;
 	ENTRADA: in std_logic_vector(3 downto 0);
 	SAIDA: out std_logic_vector(3 downto 0));
-end component;
+end registrador4;
 
 	component registrador2 is
 
@@ -57,14 +57,14 @@ port (
 	RST: in std_logic;
 	ENTRADA: in std_logic_vector(1 downto 0);
 	SAIDA: out std_logic_vector(1 downto 0));
-end component;
+emd registrador2;
 
 	component decodificador is
 
     port(entrada: in std_logic_vector(3 downto 0);
          display: out std_logic_vector(6 downto 0)         
     );
-end component;
+end decodificador;
 
 component ClockConvert is
 port (
@@ -72,7 +72,7 @@ port (
 	      Nv: in std_logic_vector(1 downto 0);
    NewClock: out std_logic
 );
-end component;
+end ClockConvert;
 
 component multiplexador16 is 
 port(
@@ -95,7 +95,7 @@ port(
         	sinal: in std_logic_vector(3 downto 0);
            saida: out std_logic_vector(9 downto 0)
         );
-end component;
+end multiplexador16;
 
 component DeslocadorGeral is 
 port(
@@ -103,7 +103,7 @@ port(
          sinal: in std_logic_vector(1 downto 0); --Nv
          saida: out std_logic_vector(7 downto 0)
         );
-end component;
+end DeslocadorGeral;
 
 component selecionaRom is
 port (
@@ -111,7 +111,7 @@ port (
 		  vl: in std_logic_vector (3 downto 0);
    	  vroml: out std_logic_vector (7 downto 0)
 );
-end component;
+end selecionaRom;
 
 begin
 

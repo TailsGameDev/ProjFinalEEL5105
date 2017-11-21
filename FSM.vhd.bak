@@ -10,7 +10,7 @@ port ( 	CG: in std_logic;
 		E1: out std_logic;
 		E2: out std_logic;
 		E3: out std_logic;
-		C: out std_logic
+		C: out std_logic;
 	);
 end FSM;
 

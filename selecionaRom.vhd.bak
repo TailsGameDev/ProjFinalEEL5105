@@ -5,61 +5,60 @@ entity selecionaRom is
 port (
 		 ROM: in std_logic_vector (1 downto 0);
 		  vl: in std_logic_vector (3 downto 0);
-   	  vromL: out std_logic_vector (7 downto 0)
+   	  vroml: out std_logic_vector (7 downto 0)
 );
 end selecionaRom;
 
 architecture selecionaRomArch of selecionaRom is
 
-component ROM0 is
+component ROM is
   port ( 
 	address : in std_logic_vector(3 downto 0);
 	data : out std_logic_vector(7 downto 0) );
-end component;
+end ROM;
 
 component ROM1 is
   port ( 
 	address : in std_logic_vector(3 downto 0);
 	data : out std_logic_vector(7 downto 0) );
-end component;
+end ROM1;
 
 component ROM2 is
   port ( 
 	address : in std_logic_vector(3 downto 0);
 	data : out std_logic_vector(7 downto 0) );
-end component;
+end ROM2;
 
 component ROM3 is
   port ( 
 	address : in std_logic_vector(3 downto 0);
 	data : out std_logic_vector(7 downto 0) );
-end component;
+end ROM3;
 
 component multiplexador4 is 
 port(
-			 entrada: in std_logic_vector(7 downto 0);
+	  	 entrada: in std_logic_vector(7 downto 0);
          entrada2: in std_logic_vector(7 downto 0);
          entrada3: in std_logic_vector(7 downto 0);
          entrada4: in std_logic_vector(7 downto 0);
             sinal: in std_logic_vector(1 downto 0);
            saida: out std_logic_vector(7 downto 0)
         );
-end component;
+end multiplexador4;
 
 
-signal       vrom0:    std_logic_vector (7 downto 0);
+signal        vrom:    std_logic_vector (7 downto 0);
 signal       vrom1:    std_logic_vector (7 downto 0);
 signal       vrom2:    std_logic_vector (7 downto 0);
 signal       vrom3:    std_logic_vector (7 downto 0);
 
 begin
 
-lerom0: ROM0 port map (vl, vrom0);
+lerom0:  ROM port map (vl,  vrom);
 lerom1: ROM1 port map (vl, vrom1);
 lerom2: ROM2 port map (vl, vrom2);
 lerom3: ROM3 port map (vl, vrom3);
-selmem: multiplexador4 port map (vrom0 (7 downto 0), vrom1 (7 downto 0),
-								vrom2(7 downto 0), vrom3 (7 downto 0), ROM, vromL);
+selmem: multiplexador4 port map (vrom, vrom1, vrom2. vrom3, ROM, vroml);
 
 
 end selecionaRomArch;

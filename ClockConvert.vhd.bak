@@ -16,28 +16,28 @@ component Clock01 is
 	port (
 	CLOCK_50: in std_logic;
 	saida: out std_logic );
-end component;
+end Clock01;
 
 	component Clock25 is
 
 	port (
 	CLOCK_50: in std_logic;
 	saida: out std_logic );
-end component;
+end Clock25;
 
 	component Clock33 is
 
 	port (
 	CLOCK_50: in std_logic;
 	saida: out std_logic );
-end component;
+end Clock33;
 
 	component Clock05 is
 
 	port (
 	CLOCK_50: in std_logic;
 	saida: out std_logic );
-end component;
+end Clock05;
 
 component mux4e1b is 
 port(
@@ -48,7 +48,7 @@ port(
             sinal: in std_logic_vector(1 downto 0);
            saida: out std_logic
         );
-end component;
+end mux4e1b;
 
 signal       C01:    std_logic;
 signal       C25:    std_logic;
