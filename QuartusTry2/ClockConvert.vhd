@@ -41,7 +41,7 @@ end component;
 
 component mux4e1b is 
 port(
-	  	  entrada: in std_logic;
+	  	    entrada: in std_logic;
          entrada2: in std_logic;
          entrada3: in std_logic;
          entrada4: in std_logic;

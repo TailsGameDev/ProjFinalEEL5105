@@ -17,8 +17,7 @@ port (    E1: in std_logic;
        HEX1: out std_logic_vector (6 downto 0);
        HEX0: out std_logic_vector (6 downto 0);
        LEDR: out std_logic_vector (9 downto 0);
-          M: out std_logic;
-	  	CGout: out std_logic
+          M: out std_logic
 );
 end DATAPATH;
 
@@ -26,18 +25,16 @@ architecture DATAPATHArch of DATAPATH is
 
    --signals
 
-signal         l:    std_logic_vector (3 downto 0);
-signal     lplus:    std_logic_vector (3 downto 0);
+signal         L:    std_logic_vector (3 downto 0);
+signal     Lplus:    std_logic_vector (3 downto 0);
 signal      Ptos:    std_logic_vector (3 downto 0);
 signal        Nv:    std_logic_vector (1 downto 0);
 signal       ROM:    std_logic_vector (1 downto 0);
 signal     FPtos:    std_logic_vector (7 downto 0);
 signal        E4:    std_logic;
 signal   sigPtos:    std_logic_vector (3 downto 0);
-signal      roml:    std_logic_vector (7 downto 0);
+signal      romL:    std_logic_vector (7 downto 0);
 signal        CG:    std_logic;
-signal       vCG:    std_logic;
-
 
    --components
 
@@ -117,25 +114,24 @@ end component;
 
 begin
 
-CGout <= CG;
-
-lplus <= l + '1';
+Lplus <= L + '1';
+sigPtos <= Ptos + '1';
  HEX5 <= "1000111";
 
  --comparador de menor
- M <= '1' when (l < "1001") else
+ M <= '1' when (L < "1001") else
       '0' ;
 
  --comparador de igualdade
- E4 <= '1' when (roml = SW(7 downto 0)) else
+ E4 <= '1' when (romL = SW(7 downto 0)) else
        '0';
 
  --registradores
 
-regl: registrador4 port map (vCG, E1, C, lplus          , l    );
-reg2: registrador4 port map (vCG, E4, C, sigPtos        , Ptos );
-reg3: registrador2 port map (vCG, E2, C, SW(9 downto 8) , Nv   );
-reg4: registrador2 port map (vCG, E3, C, SW(1 downto 0) , ROM  );
+regL:    registrador4 port map (      CG, E1, C, Lplus          , L    );
+regPtos: registrador4 port map (      CG, E4, C, sigPtos        , Ptos );
+regNv:   registrador2 port map (CLOCK_50, E2, C, SW(9 downto 8) , Nv   );
+regROM:  registrador2 port map (CLOCK_50, E3, C, SW(1 downto 0) , ROM  );
 
  --decodificadores
 
@@ -153,10 +149,10 @@ conclock: ClockConvert port map(CLOCK_50, Nv, CG);
  --multiplexador
 
 mux16: multiplexador16 port map
-							  ("1010101010","1010101010","1010101010","1010101010",
-                        "1010101010","1111111111","0111111111","0011111111",
-                        "0001111111","0000111111","0000011111","0000001111",
-                        "0000000111","0000000011","0000000001","0000000000",
+							  ("0000000000","0000000001","0000000011","0000000111",
+								"0000001111","0000011111","0000111111","0001111111",
+								"0011111111","0111111111","1111111111","1111100000",
+								"1111000000","1110000000","1100000000","1000000000",
                         Ptos, LEDR(9 downto 0));
 
 --deslocador geral
@@ -165,7 +161,7 @@ dg: DeslocadorGeral port map(Ptos, Nv, Fptos);
 
 --selecionador de memória 
 
-selctmem: selecionaRom port map(ROM, l, roml);
+selctmem: selecionaRom port map(ROM, L, romL);
 
 
 end DATAPATHArch;

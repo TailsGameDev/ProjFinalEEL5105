@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for joguinhoTopper
-Thu Nov 23 15:14:50 2017
+Thu Nov 23 18:27:00 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -17,42 +17,61 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   9. Slow 1100mV 85C Model Recovery Summary
  10. Slow 1100mV 85C Model Removal Summary
  11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Datasheet Report
- 13. Slow 1100mV 85C Model Metastability Summary
- 14. Slow 1100mV 0C Model Fmax Summary
- 15. Slow 1100mV 0C Model Setup Summary
- 16. Slow 1100mV 0C Model Hold Summary
- 17. Slow 1100mV 0C Model Recovery Summary
- 18. Slow 1100mV 0C Model Removal Summary
- 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 20. Slow 1100mV 0C Model Datasheet Report
- 21. Slow 1100mV 0C Model Metastability Summary
- 22. Fast 1100mV 85C Model Setup Summary
- 23. Fast 1100mV 85C Model Hold Summary
- 24. Fast 1100mV 85C Model Recovery Summary
- 25. Fast 1100mV 85C Model Removal Summary
- 26. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 27. Fast 1100mV 85C Model Datasheet Report
- 28. Fast 1100mV 85C Model Metastability Summary
- 29. Fast 1100mV 0C Model Setup Summary
- 30. Fast 1100mV 0C Model Hold Summary
- 31. Fast 1100mV 0C Model Recovery Summary
- 32. Fast 1100mV 0C Model Removal Summary
- 33. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 34. Fast 1100mV 0C Model Datasheet Report
- 35. Fast 1100mV 0C Model Metastability Summary
- 36. Multicorner Timing Analysis Summary
- 37. Board Trace Model Assignments
- 38. Input Transition Times
- 39. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 40. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 41. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 42. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 43. Clock Transfers
- 44. Report TCCS
- 45. Report RSKM
- 46. Unconstrained Paths
- 47. TimeQuest Timing Analyzer Messages
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Slow 1100mV 85C Model Metastability Summary
+ 17. Slow 1100mV 0C Model Fmax Summary
+ 18. Slow 1100mV 0C Model Setup Summary
+ 19. Slow 1100mV 0C Model Hold Summary
+ 20. Slow 1100mV 0C Model Recovery Summary
+ 21. Slow 1100mV 0C Model Removal Summary
+ 22. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 23. Setup Times
+ 24. Hold Times
+ 25. Clock to Output Times
+ 26. Minimum Clock to Output Times
+ 27. Slow 1100mV 0C Model Metastability Summary
+ 28. Fast 1100mV 85C Model Setup Summary
+ 29. Fast 1100mV 85C Model Hold Summary
+ 30. Fast 1100mV 85C Model Recovery Summary
+ 31. Fast 1100mV 85C Model Removal Summary
+ 32. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Fast 1100mV 85C Model Metastability Summary
+ 38. Fast 1100mV 0C Model Setup Summary
+ 39. Fast 1100mV 0C Model Hold Summary
+ 40. Fast 1100mV 0C Model Recovery Summary
+ 41. Fast 1100mV 0C Model Removal Summary
+ 42. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Fast 1100mV 0C Model Metastability Summary
+ 48. Multicorner Timing Analysis Summary
+ 49. Setup Times
+ 50. Hold Times
+ 51. Clock to Output Times
+ 52. Minimum Clock to Output Times
+ 53. Board Trace Model Assignments
+ 54. Input Transition Times
+ 55. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 56. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 57. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 58. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 59. Setup Transfers
+ 60. Hold Transfers
+ 61. Recovery Transfers
+ 62. Removal Transfers
+ 63. Report TCCS
+ 64. Report RSKM
+ 65. Unconstrained Paths
+ 66. TimeQuest Timing Analyzer Messages
 
 
 
@@ -107,16 +126,25 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                                         ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
+; Clock Name                                                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                            ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
+; CLOCK_50                                                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }                                                       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida } ;
++----------------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------------------------+
 
 
---------------------------------------
-; Slow 1100mV 85C Model Fmax Summary ;
---------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary                                                                   ;
++------------+-----------------+----------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                     ; Note ;
++------------+-----------------+----------------------------------------------------------------+------+
+; 290.11 MHz ; 290.11 MHz      ; CLOCK_50                                                       ;      ;
+; 497.51 MHz ; 497.51 MHz      ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;      ;
++------------+-----------------+----------------------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
 ----------------------------------
@@ -125,40 +153,146 @@ No paths to report.
 HTML report is unavailable in plain text report export.
 
 
----------------------------------------
-; Slow 1100mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary                                                     ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -2.447 ; -67.448       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -1.010 ; -3.423        ;
++----------------------------------------------------------------+--------+---------------+
 
 
---------------------------------------
-; Slow 1100mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Hold Summary                                                     ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.317 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.627 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary                                                  ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.102 ; -12.360       ;
+; CLOCK_50                                                       ; -0.039 ; -0.039        ;
++----------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Removal Summary                                                  ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.542 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.762 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
------------------------------------------------------
-; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary                                       ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -0.394 ; -16.597       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -0.394 ; -2.070        ;
++----------------------------------------------------------------+--------+---------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                                              ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 1.446 ; 1.832 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 1.446 ; 1.832 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.324 ; 7.969 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.324 ; 6.848 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.616 ; 7.523 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.770 ; 7.710 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.830 ; 7.766 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.072 ; 7.969 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.714 ; 7.681 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.845 ; 6.516 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.613 ; 7.338 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                                                 ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.008  ; -0.331 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.008  ; -0.331 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.142 ; -5.068 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.612 ; -5.366 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.216 ; -5.796 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.265 ; -5.873 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.356 ; -5.986 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.585 ; -6.170 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.193 ; -5.819 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.230 ; -5.068 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.142 ; -5.680 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                                    ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.487 ; 7.667 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.981 ; 6.138 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.904 ; 7.330 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.883 ; 7.346 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.848 ; 7.307 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.219 ; 7.667 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.887 ; 7.355 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.487 ; 7.023 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.514 ; 8.842 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.351 ; 8.679 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.514 ; 8.842 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.088 ; 8.361 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.073 ; 6.487 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.904 ; 8.095 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.280 ; 6.627 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.437 ; 7.590 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.501 ; 5.327 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.893 ; 6.005 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.487 ; 5.520 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                                            ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.029 ; 5.234 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.029 ; 5.234 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.917 ; 6.356 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.848 ; 6.224 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.862 ; 6.349 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.040 ; 6.548 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.740 ; 6.210 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.464 ; 5.997 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.610 ; 4.555 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.219 ; 6.485 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.355 ; 6.568 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.111 ; 6.323 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.233 ; 5.513 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.933 ; 6.097 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.304 ; 5.590 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.237 ; 5.377 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.663 ; 4.555 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.935 ; 5.034 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.610 ; 4.643 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
 
 
 -----------------------------------------------
@@ -167,46 +301,157 @@ Nothing to report.
 No synchronizer chains to report.
 
 
--------------------------------------
-; Slow 1100mV 0C Model Fmax Summary ;
--------------------------------------
-No paths to report.
++------------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                                                                    ;
++------------+-----------------+----------------------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                                     ; Note ;
++------------+-----------------+----------------------------------------------------------------+------+
+; 295.77 MHz ; 295.77 MHz      ; CLOCK_50                                                       ;      ;
+; 491.4 MHz  ; 491.4 MHz       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;      ;
++------------+-----------------+----------------------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
---------------------------------------
-; Slow 1100mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary                                                      ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -2.381 ; -65.748       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -1.035 ; -3.457        ;
++----------------------------------------------------------------+--------+---------------+
 
 
--------------------------------------
-; Slow 1100mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                      ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.296 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.588 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary                                                   ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.176 ; -12.664       ;
+; CLOCK_50                                                       ; 0.009  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Slow 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Removal Summary                                                   ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.510 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.859 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-----------------------------------------------------
-; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary                                        ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -0.394 ; -17.938       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -0.394 ; -2.136        ;
++----------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                                              ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 1.276 ; 1.702 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 1.276 ; 1.702 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.217 ; 7.855 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.217 ; 6.726 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.476 ; 7.384 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.627 ; 7.597 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.653 ; 7.600 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.956 ; 7.855 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.575 ; 7.563 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.689 ; 6.332 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.453 ; 7.198 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                                                 ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.207  ; -0.166 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.207  ; -0.166 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -4.966 ; -4.873 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.443 ; -5.171 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.014 ; -5.605 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.041 ; -5.662 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.117 ; -5.771 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.399 ; -6.005 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -4.972 ; -5.610 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -5.111 ; -4.873 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -4.966 ; -5.578 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                                    ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.145 ; 7.346 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.696 ; 5.864 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.549 ; 7.005 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.515 ; 7.007 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.528 ; 6.994 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.856 ; 7.346 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.558 ; 7.030 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.145 ; 6.658 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.101 ; 8.472 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.971 ; 8.330 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.101 ; 8.472 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.732 ; 8.039 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.781 ; 6.197 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.575 ; 7.799 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.995 ; 6.334 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.147 ; 7.300 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.259 ; 5.084 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.600 ; 5.727 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.259 ; 5.269 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                                            ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.738 ; 4.950 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.738 ; 4.950 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.552 ; 6.016 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.488 ; 5.921 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.530 ; 6.014 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.674 ; 6.186 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.404 ; 5.864 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.106 ; 5.627 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.368 ; 4.308 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.864 ; 6.178 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.971 ; 6.285 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.756 ; 6.013 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.943 ; 5.240 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.586 ; 5.789 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.985 ; 5.297 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.984 ; 5.128 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.404 ; 4.308 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.637 ; 4.764 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.368 ; 4.372 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
 
 
 ----------------------------------------------
@@ -215,40 +460,146 @@ Nothing to report.
 No synchronizer chains to report.
 
 
----------------------------------------
-; Fast 1100mV 85C Model Setup Summary ;
----------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Setup Summary                                                     ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -1.016 ; -27.066       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -0.240 ; -0.685        ;
++----------------------------------------------------------------+--------+---------------+
 
 
---------------------------------------
-; Fast 1100mV 85C Model Hold Summary ;
---------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                     ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.187 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.334 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Recovery Summary ;
-------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary                                                  ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -1.370 ; -5.462        ;
+; CLOCK_50                                                       ; 0.403  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 85C Model Removal Summary ;
------------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Removal Summary                                                  ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.294 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 1.428 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
------------------------------------------------------
-; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary                                       ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -0.088 ; -2.753        ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.142  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                                              ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.774 ; 1.464 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.774 ; 1.464 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.591 ; 5.392 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.591 ; 4.365 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.976 ; 5.189 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.019 ; 5.221 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.092 ; 5.329 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.175 ; 5.392 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.986 ; 5.214 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.344 ; 4.257 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.955 ; 4.998 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                                                 ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; -0.006 ; -0.659 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; -0.006 ; -0.659 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.097 ; -3.396 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.538 ; -3.504 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.150 ; -4.093 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.167 ; -4.090 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.229 ; -4.200 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.318 ; -4.268 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.124 ; -4.061 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.324 ; -3.396 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.097 ; -3.942 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                                    ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.876 ; 5.002 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.687 ; 3.888 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.272 ; 4.722 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.255 ; 4.746 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.265 ; 4.734 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.520 ; 5.002 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.319 ; 4.796 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.876 ; 4.394 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.068 ; 5.477 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.956 ; 5.374 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.068 ; 5.477 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.758 ; 5.134 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.649 ; 4.045 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.666 ; 4.940 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.765 ; 4.156 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.383 ; 4.596 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.409 ; 3.262 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.571 ; 3.773 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.347 ; 3.360 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                                            ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.107 ; 3.322 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.107 ; 3.322 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.684 ; 4.117 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.609 ; 4.029 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.670 ; 4.134 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.808 ; 4.368 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.626 ; 4.132 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.236 ; 3.775 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.901 ; 2.794 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.757 ; 4.110 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.816 ; 4.131 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.707 ; 4.035 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.211 ; 3.505 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.603 ; 3.864 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.241 ; 3.531 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.164 ; 3.359 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.937 ; 2.794 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.009 ; 3.218 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.901 ; 2.916 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
 
 
 -----------------------------------------------
@@ -257,40 +608,146 @@ Nothing to report.
 No synchronizer chains to report.
 
 
---------------------------------------
-; Fast 1100mV 0C Model Setup Summary ;
---------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Setup Summary                                                      ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -0.861 ; -22.907       ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -0.189 ; -0.502        ;
++----------------------------------------------------------------+--------+---------------+
 
 
--------------------------------------
-; Fast 1100mV 0C Model Hold Summary ;
--------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Hold Summary                                                      ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.170 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.296 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Recovery Summary ;
------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary                                                   ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -1.339 ; -5.340        ;
+; CLOCK_50                                                       ; 0.445  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
-----------------------------------------
-; Fast 1100mV 0C Model Removal Summary ;
-----------------------------------------
-No paths to report.
++----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary                                                   ;
++----------------------------------------------------------------+-------+---------------+
+; Clock                                                          ; Slack ; End Point TNS ;
++----------------------------------------------------------------+-------+---------------+
+; CLOCK_50                                                       ; 0.270 ; 0.000         ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 1.414 ; 0.000         ;
++----------------------------------------------------------------+-------+---------------+
 
 
-----------------------------------------------------
-; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-----------------------------------------------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary                                        ;
++----------------------------------------------------------------+--------+---------------+
+; Clock                                                          ; Slack  ; End Point TNS ;
++----------------------------------------------------------------+--------+---------------+
+; CLOCK_50                                                       ; -0.087 ; -2.728        ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 0.141  ; 0.000         ;
++----------------------------------------------------------------+--------+---------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                                              ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.651 ; 1.348 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.651 ; 1.348 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.217 ; 4.982 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.217 ; 4.102 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.706 ; 4.785 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.771 ; 4.856 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.812 ; 4.915 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.900 ; 4.982 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.713 ; 4.813 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.009 ; 3.994 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.675 ; 4.633 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                                                 ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.097  ; -0.561 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.097  ; -0.561 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.852 ; -3.189 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.238 ; -3.250 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.887 ; -3.773 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.919 ; -3.794 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.960 ; -3.875 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.051 ; -3.948 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.852 ; -3.735 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.079 ; -3.189 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.866 ; -3.673 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                                    ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.381 ; 4.495 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.368 ; 3.523 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.924 ; 4.263 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.896 ; 4.270 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.925 ; 4.269 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.147 ; 4.495 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.958 ; 4.308 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.381 ; 4.021 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.674 ; 5.017 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.576 ; 4.935 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.674 ; 5.017 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.403 ; 4.727 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.339 ; 3.677 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.329 ; 4.560 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.449 ; 3.770 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4.083 ; 4.258 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.107 ; 2.970 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.258 ; 3.424 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.060 ; 3.076 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                                            ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.826 ; 2.999 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.826 ; 2.999 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.368 ; 3.703 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.299 ; 3.612 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.365 ; 3.709 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.486 ; 3.893 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.313 ; 3.678 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.786 ; 3.441 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.631 ; 2.543 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.416 ; 3.728 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.476 ; 3.752 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.374 ; 3.659 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.920 ; 3.173 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.282 ; 3.503 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.937 ; 3.184 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.905 ; 3.061 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.659 ; 2.543 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.725 ; 2.904 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.631 ; 2.645 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
 
 
 ----------------------------------------------
@@ -299,14 +756,110 @@ Nothing to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                        ;
-+------------------+-------+------+----------+---------+---------------------+
-; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
-+------------------+-------+------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                          ;
++-----------------------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                                                           ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                                                ; -2.447  ; 0.170 ; -3.176   ; 0.270   ; -0.394              ;
+;  CLOCK_50                                                       ; -2.447  ; 0.170 ; -0.039   ; 0.270   ; -0.394              ;
+;  DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -1.035  ; 0.296 ; -3.176   ; 1.414   ; -0.394              ;
+; Design-wide TNS                                                 ; -70.871 ; 0.0   ; -12.664  ; 0.0     ; -20.074             ;
+;  CLOCK_50                                                       ; -67.448 ; 0.000 ; -0.039   ; 0.000   ; -17.938             ;
+;  DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.457  ; 0.000 ; -12.664  ; 0.000   ; -2.136              ;
++-----------------------------------------------------------------+---------+-------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                                                                              ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 1.446 ; 1.832 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 1.446 ; 1.832 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.324 ; 7.969 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.324 ; 6.848 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.616 ; 7.523 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.770 ; 7.710 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.830 ; 7.766 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.072 ; 7.969 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.714 ; 7.681 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.845 ; 6.516 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.613 ; 7.338 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                                                                                 ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise   ; Fall   ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+; KEY[*]    ; CLOCK_50                                                       ; 0.207  ; -0.166 ; Rise       ; CLOCK_50                                                       ;
+;  KEY[0]   ; CLOCK_50                                                       ; 0.207  ; -0.166 ; Rise       ; CLOCK_50                                                       ;
+; SW[*]     ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.852 ; -3.189 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[0]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.238 ; -3.250 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[1]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.887 ; -3.773 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[2]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.919 ; -3.794 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[3]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.960 ; -3.875 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[4]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.051 ; -3.948 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[5]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.852 ; -3.735 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[6]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -3.079 ; -3.189 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  SW[7]    ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; -2.866 ; -3.673 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+--------+--------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                                                                                    ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.487 ; 7.667 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.981 ; 6.138 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.904 ; 7.330 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.883 ; 7.346 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.848 ; 7.307 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.219 ; 7.667 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.887 ; 7.355 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.487 ; 7.023 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.514 ; 8.842 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.351 ; 8.679 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.514 ; 8.842 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 8.088 ; 8.361 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.073 ; 6.487 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.904 ; 8.095 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 6.280 ; 6.627 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 7.437 ; 7.590 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.501 ; 5.327 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.893 ; 6.005 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 5.487 ; 5.520 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                                                                            ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; Data Port ; Clock Port                                                     ; Rise  ; Fall  ; Clock Edge ; Clock Reference                                                ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
+; HEX2[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.826 ; 2.999 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.826 ; 2.999 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.368 ; 3.703 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.299 ; 3.612 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.365 ; 3.709 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.486 ; 3.893 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.313 ; 3.678 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  HEX2[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.786 ; 3.441 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+; LEDR[*]   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.631 ; 2.543 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[0]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.416 ; 3.728 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[1]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.476 ; 3.752 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[2]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.374 ; 3.659 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[3]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.920 ; 3.173 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[4]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 3.282 ; 3.503 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[5]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.937 ; 3.184 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[6]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.905 ; 3.061 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[7]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.659 ; 2.543 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[8]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.725 ; 2.904 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
+;  LEDR[9]  ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 2.631 ; 2.645 ; Rise       ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ;
++-----------+----------------------------------------------------------------+-------+-------+------------+----------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -376,18 +929,18 @@ No synchronizer chains to report.
 +----------+--------------+-----------------+-----------------+
 ; SW[9]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[8]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[6]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[5]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[4]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[3]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[2]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[1]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; SW[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[3]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[2]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[1]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[0]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[1]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[2]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[3]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[4]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[5]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[6]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[7]    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; CLOCK_50 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; KEY[0]   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +----------+--------------+-----------------+-----------------+
 
@@ -632,10 +1185,48 @@ No synchronizer chains to report.
 +---------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                                             ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                     ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50                                                       ; CLOCK_50                                                       ; 1219     ; 0        ; 0        ; 0        ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 10       ; 0        ; 0        ; 0        ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                                              ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                                     ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50                                                       ; CLOCK_50                                                       ; 1219     ; 0        ; 0        ; 0        ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 10       ; 0        ; 0        ; 0        ;
++----------------------------------------------------------------+----------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                      ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50                                                       ; 1        ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4        ; 0        ; 0        ; 0        ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                       ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                                                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+; CLOCK_50   ; CLOCK_50                                                       ; 1        ; 0        ; 0        ; 0        ;
+; CLOCK_50   ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida ; 4        ; 0        ; 0        ; 0        ;
++------------+----------------------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -657,10 +1248,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 34    ; 34   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 65    ; 65   ;
 +---------------------------------+-------+------+
 
 
@@ -670,7 +1261,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 23 15:14:34 2017
+    Info: Processing started: Thu Nov 23 18:26:44 2017
 Info: Command: quartus_sta joguinhoTopper -c joguinhoTopper
 Info: qsta_default_script.tcl version: #11
 Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
@@ -703,60 +1294,137 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'joguinhoTopper.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+    Info (332105): create_clock -period 1.000 -name DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow 1100mV 85C Model
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.447
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.447             -67.448 CLOCK_50 
+    Info (332119):    -1.010              -3.423 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case hold slack is 0.317
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.317               0.000 CLOCK_50 
+    Info (332119):     0.627               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case recovery slack is -3.102
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.102             -12.360 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+    Info (332119):    -0.039              -0.039 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.542
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.542               0.000 CLOCK_50 
+    Info (332119):     2.762               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.394             -16.597 CLOCK_50 
+    Info (332119):    -0.394              -2.070 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No fmax paths to report
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.381
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.381             -65.748 CLOCK_50 
+    Info (332119):    -1.035              -3.457 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case hold slack is 0.296
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.296               0.000 CLOCK_50 
+    Info (332119):     0.588               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case recovery slack is -3.176
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.176             -12.664 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+    Info (332119):     0.009               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.510
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.510               0.000 CLOCK_50 
+    Info (332119):     2.859               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.394             -17.938 CLOCK_50 
+    Info (332119):    -0.394              -2.136 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.016
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.016             -27.066 CLOCK_50 
+    Info (332119):    -0.240              -0.685 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case hold slack is 0.187
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.187               0.000 CLOCK_50 
+    Info (332119):     0.334               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case recovery slack is -1.370
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.370              -5.462 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+    Info (332119):     0.403               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.294
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.294               0.000 CLOCK_50 
+    Info (332119):     1.428               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case minimum pulse width slack is -0.088
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.088              -2.753 CLOCK_50 
+    Info (332119):     0.142               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.861
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.861             -22.907 CLOCK_50 
+    Info (332119):    -0.189              -0.502 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case hold slack is 0.170
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.170               0.000 CLOCK_50 
+    Info (332119):     0.296               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case recovery slack is -1.339
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.339              -5.340 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+    Info (332119):     0.445               0.000 CLOCK_50 
+Info (332146): Worst-case removal slack is 0.270
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.270               0.000 CLOCK_50 
+    Info (332119):     1.414               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332146): Worst-case minimum pulse width slack is -0.087
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.087              -2.728 CLOCK_50 
+    Info (332119):     0.141               0.000 DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|saida 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 1050 megabytes
-    Info: Processing ended: Thu Nov 23 15:14:50 2017
+    Info: Peak virtual memory: 1081 megabytes
+    Info: Processing ended: Thu Nov 23 18:27:00 2017
     Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:13
+    Info: Total CPU time (on all processors): 00:00:15
 
 

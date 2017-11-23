@@ -48,7 +48,7 @@ begin
 			PEstado <= SETUP;
 
 		when SETUP =>
-			E1<='1';
+			E1<='0';
 			E2<='1';
 			E3<='0';
 			C<='0';

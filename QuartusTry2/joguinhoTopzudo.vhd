@@ -47,8 +47,7 @@ port (    E1: in std_logic;
        HEX1: out std_logic_vector (6 downto 0);
        HEX0: out std_logic_vector (6 downto 0);
        LEDR: out std_logic_vector (9 downto 0);
-          M: out std_logic;
-	  	 CGout: out std_logic
+          M: out std_logic
 );
 end component;
 
@@ -76,7 +75,7 @@ begin
 
 callbtns: ButtonSync port map(KEY(0), KEY(1), KEY(2), KEY(3), CLOCK_50, BTN0, BTN1, BTN2, BTN3 );
 calldtp: DATAPATH port map(E1, E2, E3, C, CLOCK_50, SW, HEX5, HEX4,
- HEX3, HEX2, HEX1, HEX0, LEDR, M, CG);
+ HEX3, HEX2, HEX1, HEX0, LEDR, M);
 callfsm: FSM port map(CLOCK_50, M, BTN0, BTN1, E1, E2, E3, C);
 
 end joguinhoTopArch;

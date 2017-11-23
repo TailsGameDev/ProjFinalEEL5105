@@ -3,7 +3,7 @@ use IEEE.std_logic_1164.all;
 
 entity multiplexador16 is 
 port(
-		 entrada1: in std_logic_vector(9 downto 0);
+		   entrada1: in std_logic_vector(9 downto 0);
          entrada2: in std_logic_vector(9 downto 0);
          entrada3: in std_logic_vector(9 downto 0);
          entrada4: in std_logic_vector(9 downto 0);

@@ -312,9 +312,6 @@ set_global_assignment -name VHDL_FILE mux4e1b.vhd
 set_global_assignment -name VHDL_FILE Multiplicador.vhd
 set_global_assignment -name VHDL_FILE multiplexador16.vhd
 set_global_assignment -name VHDL_FILE multiplexador4.vhd
-set_global_assignment -name VHDL_FILE joguinhoTop.vhd
-set_global_assignment -name VHDL_FILE halfadder.vhd
-set_global_assignment -name VHDL_FILE fulladder.vhd
 set_global_assignment -name VHDL_FILE FSM.vhd
 set_global_assignment -name VHDL_FILE DeslocadorGeral.vhd
 set_global_assignment -name VHDL_FILE decodificador.vhd

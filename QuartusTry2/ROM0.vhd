@@ -17,7 +17,7 @@ type mem is array (0 to 9) of std_logic_vector(7 downto 0);
 
 constant my_rom : mem := (
 	
-	0 => "00000000", -- 00
+	0 => "10111110", -- bE
 	1 => "11000001", -- C1
    2 => "01000000", -- 40
 	3 => "11111110", -- FE

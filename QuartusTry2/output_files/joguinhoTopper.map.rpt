@@ -1,5 +1,5 @@
 Analysis & Synthesis report for joguinhoTopper
-Thu Nov 23 15:12:35 2017
+Thu Nov 23 18:24:36 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -54,13 +54,13 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 23 15:12:35 2017      ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 23 18:24:35 2017      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; joguinhoTopper                             ;
 ; Top-level Entity Name           ; joguinhoTopzudo                            ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
-; Total registers                 ; 0                                          ;
+; Total registers                 ; 36                                         ;
 ; Total pins                      ; 67                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
@@ -210,35 +210,45 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 0              ;
+; Estimate of Logic utilization (ALMs needed) ; 34             ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 0              ;
+; Combinational ALUT usage for logic          ; 61             ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 0              ;
-;     -- 5 input functions                    ; 0              ;
-;     -- 4 input functions                    ; 0              ;
-;     -- <=3 input functions                  ; 0              ;
+;     -- 6 input functions                    ; 6              ;
+;     -- 5 input functions                    ; 2              ;
+;     -- 4 input functions                    ; 15             ;
+;     -- <=3 input functions                  ; 38             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 0              ;
+; Dedicated logic registers                   ; 36             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 67             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
-; Maximum fan-out node                        ; HEX5[0]~output ;
-; Maximum fan-out                             ; 1              ;
-; Total fan-out                               ; 67             ;
-; Average fan-out                             ; 0.50           ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 32             ;
+; Total fan-out                               ; 371            ;
+; Average fan-out                             ; 1.61           ;
 +---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
-; |joguinhoTopzudo           ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 67   ; 0            ; |joguinhoTopzudo    ; work         ;
-+----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                       ; Library Name ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+--------------+
+; |joguinhoTopzudo              ; 61 (1)            ; 36 (0)       ; 0                 ; 0          ; 67   ; 0            ; |joguinhoTopzudo                                                          ; work         ;
+;    |ButtonSync:callbtns|      ; 2 (2)             ; 2 (2)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|ButtonSync:callbtns                                      ; work         ;
+;    |DATAPATH:calldtp|         ; 58 (4)            ; 33 (0)       ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp                                         ; work         ;
+;       |ClockConvert:conclock| ; 35 (0)            ; 29 (0)       ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|ClockConvert:conclock                   ; work         ;
+;          |Clock01:convert01|  ; 28 (28)           ; 29 (29)      ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01 ; work         ;
+;          |Clock01:convert05|  ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05 ; work         ;
+;          |mux4e1b:decision|   ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision  ; work         ;
+;       |decodificador:dhex2|   ; 7 (7)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex2                     ; work         ;
+;       |multiplexador16:mux16| ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|multiplexador16:mux16                   ; work         ;
+;       |registrador4:regPtos|  ; 3 (3)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|DATAPATH:calldtp|registrador4:regPtos                    ; work         ;
+;    |FSM:callfsm|              ; 0 (0)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |joguinhoTopzudo|FSM:callfsm                                              ; work         ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -303,50 +313,134 @@ Encoding Type:  One-Hot
 +-------------------------+------------------------+----------------------+-------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+------------------------------------------------+---------------------------------------------+
-; Register name                                  ; Reason for Removal                          ;
-+------------------------------------------------+---------------------------------------------+
-; DATAPATH:calldtp|registrador2:reg4|SAIDA[0,1]  ; Stuck at GND due to stuck port clock_enable ;
-; DATAPATH:calldtp|registrador2:reg3|SAIDA[0,1]  ; Stuck at GND due to stuck port clock_enable ;
-; DATAPATH:calldtp|registrador4:regl|SAIDA[0..3] ; Stuck at GND due to stuck port clock_enable ;
-; DATAPATH:calldtp|registrador4:reg2|SAIDA[0..3] ; Stuck at GND due to stuck port clock        ;
-; ButtonSync:callbtns|btn3state.SaidaAtiva       ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn3state.EsperaSoltar     ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn3state.EsperaApertar    ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn2state.SaidaAtiva       ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn2state.EsperaSoltar     ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn2state.EsperaApertar    ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn1state.EsperaSoltar     ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn0state.EsperaSoltar     ; Lost fanout                                 ;
-; FSM:callfsm|EAtual.INIT                        ; Lost fanout                                 ;
-; FSM:callfsm|EAtual.SETUP                       ; Lost fanout                                 ;
-; FSM:callfsm|EAtual.GAME                        ; Lost fanout                                 ;
-; FSM:callfsm|EAtual.RESULT                      ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn1state.EsperaApertar    ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn1state.SaidaAtiva       ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn0state.EsperaApertar    ; Lost fanout                                 ;
-; ButtonSync:callbtns|btn0state.SaidaAtiva       ; Lost fanout                                 ;
-; Total Number of Removed Registers = 28         ;                                             ;
-+------------------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; Register name                                                     ; Reason for Removal                                                            ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
+; DATAPATH:calldtp|registrador2:regROM|SAIDA[0,1]                   ; Stuck at GND due to stuck port clock_enable                                   ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[27] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[27] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[27] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[27] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[27] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[27] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[26] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[26] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[26] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[26] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[26] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[26] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[25] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[25] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[25] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[25] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[25] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[25] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[24] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[24] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[24] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[24] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[24] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[24] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[23] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[23] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[23] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[23] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[23] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[23] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[22] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[22] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[22] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[22] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[22] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[22] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[21] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[21] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[21] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[21] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[21] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[21] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[20] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[20] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[20] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[20] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[20] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[20] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[19] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[19] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[19] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[19] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[19] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[19] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[18] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[18] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[18] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[18] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[18] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[18] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[17] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[17] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[17] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[17] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[17] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[17] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[16] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[16] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[16] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[16] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[16] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[16] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[15] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[15] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[15] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[15] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[15] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[15] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[14] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[14] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[14] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[14] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[14] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[14] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[13] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[13] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[13] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[13] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[13] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[13] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[12] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[12] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[12] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[12] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[12] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[12] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[11] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[11] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[11] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[11] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[11] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[11] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[10] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[10] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[10] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[10] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[10] ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[10] ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[9]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[9]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[9]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[9]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[9]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[9]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[8]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[8]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[8]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[8]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[8]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[8]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[7]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[7]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[7]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[7]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[7]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[7]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[6]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[6]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[6]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[6]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[6]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[6]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[5]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[5]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[5]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[5]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[5]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[5]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[4]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[4]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[4]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[4]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[4]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[4]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[3]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[3]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[3]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[3]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[3]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[3]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[2]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[2]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[2]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[2]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[2]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[2]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[1]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[1]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[1]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[1]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[1]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[1]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|cont[0]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[0]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|cont[0]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[0]  ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|cont[0]  ; Merged with DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01|cont[0]  ;
+; DATAPATH:calldtp|registrador2:regNv|SAIDA[0,1]                    ; Stuck at GND due to stuck port clock_enable                                   ;
+; DATAPATH:calldtp|registrador4:regL|SAIDA[0..3]                    ; Stuck at GND due to stuck port clock_enable                                   ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|saida    ; Lost fanout                                                                   ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|saida    ; Lost fanout                                                                   ;
+; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|saida    ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn3state.SaidaAtiva                          ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn3state.EsperaSoltar                        ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn3state.EsperaApertar                       ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn2state.SaidaAtiva                          ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn2state.EsperaSoltar                        ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn2state.EsperaApertar                       ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn1state.EsperaSoltar                        ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn0state.EsperaSoltar                        ; Lost fanout                                                                   ;
+; FSM:callfsm|EAtual.SETUP                                          ; Lost fanout                                                                   ;
+; FSM:callfsm|EAtual.GAME                                           ; Lost fanout                                                                   ;
+; FSM:callfsm|EAtual.RESULT                                         ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn1state.EsperaApertar                       ; Lost fanout                                                                   ;
+; ButtonSync:callbtns|btn1state.SaidaAtiva                          ; Lost fanout                                                                   ;
+; Total Number of Removed Registers = 108                           ;                                                                               ;
++-------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+---------------------------------------------+--------------------------------+----------------------------------------------+
-; Register name                               ; Reason for Removal             ; Registers Removed due to This Register       ;
-+---------------------------------------------+--------------------------------+----------------------------------------------+
-; DATAPATH:calldtp|registrador2:reg4|SAIDA[1] ; Stuck at GND                   ; DATAPATH:calldtp|registrador4:reg2|SAIDA[3], ;
-;                                             ; due to stuck port clock_enable ; DATAPATH:calldtp|registrador4:reg2|SAIDA[2], ;
-;                                             ;                                ; DATAPATH:calldtp|registrador4:reg2|SAIDA[1], ;
-;                                             ;                                ; DATAPATH:calldtp|registrador4:reg2|SAIDA[0]  ;
-; ButtonSync:callbtns|btn3state.SaidaAtiva    ; Lost Fanouts                   ; ButtonSync:callbtns|btn3state.EsperaApertar  ;
-; ButtonSync:callbtns|btn2state.SaidaAtiva    ; Lost Fanouts                   ; ButtonSync:callbtns|btn2state.EsperaApertar  ;
-; ButtonSync:callbtns|btn1state.EsperaSoltar  ; Lost Fanouts                   ; ButtonSync:callbtns|btn1state.EsperaApertar  ;
-; ButtonSync:callbtns|btn0state.EsperaSoltar  ; Lost Fanouts                   ; ButtonSync:callbtns|btn0state.EsperaApertar  ;
-; FSM:callfsm|EAtual.INIT                     ; Lost Fanouts                   ; ButtonSync:callbtns|btn0state.SaidaAtiva     ;
-+---------------------------------------------+--------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                     ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------+
+; Register name                                ; Reason for Removal             ; Registers Removed due to This Register                          ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------+
+; DATAPATH:calldtp|registrador2:regNv|SAIDA[1] ; Stuck at GND                   ; DATAPATH:calldtp|registrador4:regL|SAIDA[3],                    ;
+;                                              ; due to stuck port clock_enable ; DATAPATH:calldtp|registrador4:regL|SAIDA[2],                    ;
+;                                              ;                                ; DATAPATH:calldtp|registrador4:regL|SAIDA[1],                    ;
+;                                              ;                                ; DATAPATH:calldtp|registrador4:regL|SAIDA[0],                    ;
+;                                              ;                                ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert05|saida, ;
+;                                              ;                                ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert33|saida, ;
+;                                              ;                                ; DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert25|saida  ;
+; ButtonSync:callbtns|btn3state.SaidaAtiva     ; Lost Fanouts                   ; ButtonSync:callbtns|btn3state.EsperaApertar                     ;
+; ButtonSync:callbtns|btn2state.SaidaAtiva     ; Lost Fanouts                   ; ButtonSync:callbtns|btn2state.EsperaApertar                     ;
+; ButtonSync:callbtns|btn1state.EsperaSoltar   ; Lost Fanouts                   ; ButtonSync:callbtns|btn1state.EsperaApertar                     ;
++----------------------------------------------+--------------------------------+-----------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -354,12 +448,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -370,8 +464,8 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex4|display[1] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex3|display[4] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex4|display[2] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex3|display[6] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|DeslocadorGeral:dg|saida[6]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
 
 
@@ -380,76 +474,36 @@ Encoding Type:  One-Hot
 +-----------------+-------+----------+-------------------------------+
 ; Port            ; Type  ; Severity ; Details                       ;
 +-----------------+-------+----------+-------------------------------+
-; entrada1[9]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada1[8]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada1[7]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada1[6]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada1[5]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada1[4]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada1[3]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada1[2]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada1[1]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada1[0]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada2[9]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada2[8]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada2[7]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada2[6]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada2[5]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada2[4]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada2[3]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada2[2]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada2[1]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada2[0]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada3[9]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada3[8]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada3[7]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada3[6]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada3[5]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada3[4]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada3[3]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada3[2]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada3[1]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada3[0]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada4[9]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada4[8]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada4[7]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada4[6]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada4[5]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada4[4]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada4[3]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada4[2]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada4[1]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada4[0]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada5[9]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada5[8]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada5[7]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada5[6]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada5[5]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada5[4]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada5[3]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada5[2]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada5[1]     ; Input ; Info     ; Stuck at VCC                  ;
-; entrada5[0]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada6        ; Input ; Info     ; Stuck at VCC                  ;
-; entrada7[8..0]  ; Input ; Info     ; Stuck at VCC                  ;
-; entrada7[9]     ; Input ; Info     ; Stuck at GND                  ;
-; entrada8[7..0]  ; Input ; Info     ; Stuck at VCC                  ;
-; entrada8[9..8]  ; Input ; Info     ; Stuck at GND                  ;
-; entrada9[6..0]  ; Input ; Info     ; Stuck at VCC                  ;
-; entrada9[9..7]  ; Input ; Info     ; Stuck at GND                  ;
-; entrada10[5..0] ; Input ; Info     ; Stuck at VCC                  ;
-; entrada10[9..6] ; Input ; Info     ; Stuck at GND                  ;
-; entrada11[4..0] ; Input ; Info     ; Stuck at VCC                  ;
-; entrada11[9..5] ; Input ; Info     ; Stuck at GND                  ;
-; entrada12[3..0] ; Input ; Info     ; Stuck at VCC                  ;
-; entrada12[9..4] ; Input ; Info     ; Stuck at GND                  ;
-; entrada13[2..0] ; Input ; Info     ; Stuck at VCC                  ;
-; entrada13[9..3] ; Input ; Info     ; Stuck at GND                  ;
-; entrada14[1..0] ; Input ; Info     ; Stuck at VCC                  ;
-; entrada14[9..2] ; Input ; Info     ; Stuck at GND                  ;
-; entrada15[9..1] ; Input ; Info     ; Stuck at GND                  ;
-; entrada15[0]    ; Input ; Info     ; Stuck at VCC                  ;
-; entrada16       ; Input ; Info     ; Stuck at GND                  ;
+; entrada1        ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[9..1]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[0]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[1..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[9..2]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[2..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[9..3]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[3..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[9..4]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada6[4..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada6[9..5]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada7[5..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada7[9..6]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada8[6..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada8[9..7]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada9[7..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada9[9..8]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada10[8..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada10[9]    ; Input ; Info     ; Stuck at GND                  ;
+; entrada11       ; Input ; Info     ; Stuck at VCC                  ;
+; entrada12[9..5] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada12[4..0] ; Input ; Info     ; Stuck at GND                  ;
+; entrada13[9..6] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada13[5..0] ; Input ; Info     ; Stuck at GND                  ;
+; entrada14[9..7] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada14[6..0] ; Input ; Info     ; Stuck at GND                  ;
+; entrada15[9..8] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada15[7..0] ; Input ; Info     ; Stuck at GND                  ;
+; entrada16[8..0] ; Input ; Info     ; Stuck at GND                  ;
+; entrada16[9]    ; Input ; Info     ; Stuck at VCC                  ;
 +-----------------+-------+----------+-------------------------------+
 
 
@@ -477,13 +531,26 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 2                           ;
-;     normal            ; 2                           ;
+; arriav_ff             ; 36                          ;
+;     CLR               ; 3                           ;
+;     ENA CLR           ; 2                           ;
+;     SCLR              ; 28                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 66                          ;
+;     arith             ; 28                          ;
+;         1 data inputs ; 28                          ;
+;     normal            ; 38                          ;
 ;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 15                          ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 6                           ;
 ; boundary_port         ; 67                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 3.70                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -492,7 +559,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -502,7 +569,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 23 15:12:12 2017
+    Info: Processing started: Thu Nov 23 18:24:11 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off joguinhoTopper -c joguinhoTopper
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file buttonsync.vhd
@@ -542,9 +609,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file multiplexador4.vhd
     Info (12022): Found design unit 1: multiplexador4-mux
     Info (12023): Found entity 1: multiplexador4
-Warning (12019): Can't analyze file -- file joguinhoTop.vhd is missing
-Warning (12019): Can't analyze file -- file halfadder.vhd is missing
-Warning (12019): Can't analyze file -- file fulladder.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
     Info (12022): Found design unit 1: FSM-FSMArch
     Info (12023): Found entity 1: FSM
@@ -577,10 +641,8 @@ Warning (10036): Verilog HDL or VHDL warning at joguinhoTopzudo.vhd(31): object 
 Warning (10036): Verilog HDL or VHDL warning at joguinhoTopzudo.vhd(32): object "BTN3" assigned a value but never read
 Info (12128): Elaborating entity "ButtonSync" for hierarchy "ButtonSync:callbtns"
 Info (12128): Elaborating entity "DATAPATH" for hierarchy "DATAPATH:calldtp"
-Warning (10541): VHDL Signal Declaration warning at DATAPATH.vhd(36): used implicit default value for signal "sigPtos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10541): VHDL Signal Declaration warning at DATAPATH.vhd(39): used implicit default value for signal "vCG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12128): Elaborating entity "registrador4" for hierarchy "DATAPATH:calldtp|registrador4:regl"
-Info (12128): Elaborating entity "registrador2" for hierarchy "DATAPATH:calldtp|registrador2:reg3"
+Info (12128): Elaborating entity "registrador4" for hierarchy "DATAPATH:calldtp|registrador4:regL"
+Info (12128): Elaborating entity "registrador2" for hierarchy "DATAPATH:calldtp|registrador2:regNv"
 Info (12128): Elaborating entity "decodificador" for hierarchy "DATAPATH:calldtp|decodificador:dhex4"
 Info (12128): Elaborating entity "ClockConvert" for hierarchy "DATAPATH:calldtp|ClockConvert:conclock"
 Info (12128): Elaborating entity "Clock01" for hierarchy "DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01"
@@ -594,7 +656,11 @@ Info (12128): Elaborating entity "ROM2" for hierarchy "DATAPATH:calldtp|selecion
 Info (12128): Elaborating entity "ROM3" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|ROM3:lerom3"
 Info (12128): Elaborating entity "multiplexador4" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|multiplexador4:selmem"
 Info (12128): Elaborating entity "FSM" for hierarchy "FSM:callfsm"
-Warning (10492): VHDL Process Statement warning at FSM.vhd(56): signal "BTN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at FSM.vhd(55): signal "BTN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision|saida
+    Warning (19017): Found clock multiplexer DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision|saida~0
+    Warning (19017): Found clock multiplexer DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision|saida~1
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[0]" is stuck at VCC
     Warning (13410): Pin "HEX5[1]" is stuck at VCC
@@ -617,38 +683,24 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX3[4]" is stuck at GND
     Warning (13410): Pin "HEX3[5]" is stuck at GND
     Warning (13410): Pin "HEX3[6]" is stuck at VCC
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND
-    Warning (13410): Pin "HEX2[2]" is stuck at GND
-    Warning (13410): Pin "HEX2[3]" is stuck at GND
-    Warning (13410): Pin "HEX2[4]" is stuck at GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at VCC
-    Warning (13410): Pin "HEX1[0]" is stuck at GND
-    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at VCC
+    Warning (13410): Pin "HEX1[1]" is stuck at VCC
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[3]" is stuck at GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND
     Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
     Warning (13410): Pin "HEX0[0]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at VCC
+    Warning (13410): Pin "HEX0[2]" is stuck at VCC
     Warning (13410): Pin "HEX0[3]" is stuck at GND
     Warning (13410): Pin "HEX0[4]" is stuck at GND
     Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at VCC
-    Warning (13410): Pin "LEDR[0]" is stuck at GND
-    Warning (13410): Pin "LEDR[1]" is stuck at VCC
-    Warning (13410): Pin "LEDR[2]" is stuck at GND
-    Warning (13410): Pin "LEDR[3]" is stuck at VCC
-    Warning (13410): Pin "LEDR[4]" is stuck at GND
-    Warning (13410): Pin "LEDR[5]" is stuck at VCC
-    Warning (13410): Pin "LEDR[6]" is stuck at GND
-    Warning (13410): Pin "LEDR[7]" is stuck at VCC
-    Warning (13410): Pin "LEDR[8]" is stuck at GND
-    Warning (13410): Pin "LEDR[9]" is stuck at VCC
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision|saida"
 Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
@@ -676,29 +728,20 @@ Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not ex
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 15 input pin(s) that do not drive logic
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]"
     Warning (15610): No output dependent on input pin "SW[8]"
-    Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "SW[6]"
-    Warning (15610): No output dependent on input pin "SW[5]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[1]"
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "CLOCK_50"
     Warning (15610): No output dependent on input pin "KEY[3]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[1]"
-    Warning (15610): No output dependent on input pin "KEY[0]"
-Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 130 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info (21061): Implemented 63 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 75 warnings
     Info: Peak virtual memory: 794 megabytes
-    Info: Processing ended: Thu Nov 23 15:12:35 2017
-    Info: Elapsed time: 00:00:23
-    Info: Total CPU time (on all processors): 00:00:52
+    Info: Processing ended: Thu Nov 23 18:24:36 2017
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:54
 
 

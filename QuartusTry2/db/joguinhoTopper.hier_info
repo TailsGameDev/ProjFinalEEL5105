@@ -94,26 +94,28 @@ BTN3 <= BTN3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |joguinhoTopzudo|DATAPATH:calldtp
-E1 => registrador4:regl.EN
-E2 => registrador2:reg3.EN
-E3 => registrador2:reg4.EN
-C => registrador4:regl.RST
-C => registrador4:reg2.RST
-C => registrador2:reg3.RST
-C => registrador2:reg4.RST
+E1 => registrador4:regL.EN
+E2 => registrador2:regNv.EN
+E3 => registrador2:regROM.EN
+C => registrador4:regL.RST
+C => registrador4:regPtos.RST
+C => registrador2:regNv.RST
+C => registrador2:regROM.RST
+CLOCK_50 => registrador2:regNv.CLK
+CLOCK_50 => registrador2:regROM.CLK
 CLOCK_50 => ClockConvert:conclock.CLOCK_50
 SW[0] => Equal0.IN7
-SW[0] => registrador2:reg4.ENTRADA[0]
+SW[0] => registrador2:regROM.ENTRADA[0]
 SW[1] => Equal0.IN6
-SW[1] => registrador2:reg4.ENTRADA[1]
+SW[1] => registrador2:regROM.ENTRADA[1]
 SW[2] => Equal0.IN5
 SW[3] => Equal0.IN4
 SW[4] => Equal0.IN3
 SW[5] => Equal0.IN2
 SW[6] => Equal0.IN1
 SW[7] => Equal0.IN0
-SW[8] => registrador2:reg3.ENTRADA[0]
-SW[9] => registrador2:reg3.ENTRADA[1]
+SW[8] => registrador2:regNv.ENTRADA[0]
+SW[9] => registrador2:regNv.ENTRADA[1]
 HEX5[0] <= <VCC>
 HEX5[1] <= <VCC>
 HEX5[2] <= <VCC>
@@ -167,10 +169,9 @@ LEDR[7] <= multiplexador16:mux16.saida[7]
 LEDR[8] <= multiplexador16:mux16.saida[8]
 LEDR[9] <= multiplexador16:mux16.saida[9]
 M <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-CGout <= ClockConvert:conclock.NewClock
 
 
-|joguinhoTopzudo|DATAPATH:calldtp|registrador4:regl
+|joguinhoTopzudo|DATAPATH:calldtp|registrador4:regL
 CLK => SAIDA[0]~reg0.CLK
 CLK => SAIDA[1]~reg0.CLK
 CLK => SAIDA[2]~reg0.CLK
@@ -193,7 +194,7 @@ SAIDA[2] <= SAIDA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SAIDA[3] <= SAIDA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|joguinhoTopzudo|DATAPATH:calldtp|registrador4:reg2
+|joguinhoTopzudo|DATAPATH:calldtp|registrador4:regPtos
 CLK => SAIDA[0]~reg0.CLK
 CLK => SAIDA[1]~reg0.CLK
 CLK => SAIDA[2]~reg0.CLK
@@ -216,7 +217,7 @@ SAIDA[2] <= SAIDA[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SAIDA[3] <= SAIDA[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|joguinhoTopzudo|DATAPATH:calldtp|registrador2:reg3
+|joguinhoTopzudo|DATAPATH:calldtp|registrador2:regNv
 CLK => SAIDA[0]~reg0.CLK
 CLK => SAIDA[1]~reg0.CLK
 EN => SAIDA[1]~reg0.ENA
@@ -229,7 +230,7 @@ SAIDA[0] <= SAIDA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 SAIDA[1] <= SAIDA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|joguinhoTopzudo|DATAPATH:calldtp|registrador2:reg4
+|joguinhoTopzudo|DATAPATH:calldtp|registrador2:regROM
 CLK => SAIDA[0]~reg0.CLK
 CLK => SAIDA[1]~reg0.CLK
 EN => SAIDA[1]~reg0.ENA
@@ -1262,7 +1263,6 @@ saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 |joguinhoTopzudo|FSM:callfsm
 CLOCK_50 => EAtual~1.DATAIN
-CG => ~NO_FANOUT~
 M => Selector1.IN3
 M => Selector2.IN2
 BTN0 => EAtual~3.DATAIN
