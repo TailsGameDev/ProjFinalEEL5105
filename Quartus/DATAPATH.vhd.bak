@@ -135,21 +135,20 @@ reg4: registrador2 port map (CG, E3, C, SW(1 downto 0) , ROM  );
 
  --decodificadores
 
-dhex4: decodificador port map(         "00" & Nv, HEX4);
-dhex3: decodificador port map(Fptos (7 downto 4), HEX3);
-dhex2: decodificador port map(Fptos (3 downto 0), HEX2);
-dhex1: decodificador port map( roml(7 downto 4) , HEX1);
-dhex0: decodificador port map( roml(3 downto 0) , HEX0);
+dhex4: decodificador (         "00" & Nv, HEX4);
+dhex3: decodificador (Fptos (7 downto 4), HEX3);
+dhex2: decodificador (Fptos (3 downto 0), HEX2);
+dhex1: decodificador ( roml(7 downto 4) , HEX1);
+dhex0: decodificador ( roml(3 downto 0) , HEX0);
 
 -- clock convert
 
-conclock: ClockConvert port map(CLOCK_50, Nv, CG);
+conclock: ClockConvert (CLOCK_50, Nv, CG);
 
 
  --multiplexador
 
-mux16: multiplexador16 port map
-							  ("1010101010","1010101010","1010101010","1010101010",
+mux16: multiplexador16 ("1010101010","1010101010","1010101010","1010101010",
                         "1010101010","1111111111","0111111111","0011111111",
                         "0001111111","0000111111","0000011111","0000001111",
                         "0000000111","0000000011","0000000001","0000000000",
@@ -157,11 +156,11 @@ mux16: multiplexador16 port map
 
 --deslocador geral
 
-dg: DeslocadorGeral port map(Ptos, Nv, Fptos);
+dg: DeslocadorGeral (Ptos, Nv, Fptos);
 
 --selecionador de memória
 
-selctmem: selecionaRom port map(ROM, l, roml);
+selctmem: selecionaRom (ROM, l, roml);
 
 
 end DATAPATHArch;

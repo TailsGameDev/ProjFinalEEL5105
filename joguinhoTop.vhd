@@ -29,7 +29,7 @@ signal        CG:    std_logic;
 --components
 
 component DATAPATH is 
-port (    E1: in std_logic;
+port (   E1: in std_logic;
 	      E2: in std_logic;
 	      E3: in std_logic;
 	       C: in std_logic;
@@ -60,7 +60,8 @@ end component;
 
 begin
 
-calldtp: DATAPATH (E1, E2, E3, C, CLOCK_50, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, M, CG);
-callfsm: FSM (CG, M, KEY, E1, E2, E3, C, LEDR);
+calldtp: DATAPATH port map 
+(E1, E2, E3, C, CLOCK_50, SW, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0, LEDR, M, CG);
+callfsm: FSM port map(CG, M, KEY, E1, E2, E3, C);
 
 end joguinhoTopArch;
