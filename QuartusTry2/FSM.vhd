@@ -4,9 +4,11 @@ use IEEE.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
 entity FSM is
-port ( 	CG: in std_logic;
+port (
+		CLOCK_50: in std_logic;
 		M: in std_logic;
-		KEY: std_logic_vector (1 downto 0);
+		BTN0: std_logic;
+		BTN1: std_logic;
 		E1: out std_logic;
 		E2: out std_logic;
 		E3: out std_logic;
@@ -24,12 +26,12 @@ signal EAtual, PEstado:  STATES;
 begin
 
 --process cordena a transição dos estados
-process(CG,KEY(0))
+process(CLOCK_50,BTN0)
 begin
-	if(KEY(0)='0') then
+	if(BTN0='0') then
 		EAtual <= INIT;
 
-	elsif(CG'event and CG='1') then
+	elsif(CLOCK_50'event and CLOCK_50='1') then
 		EAtual <= PEstado;
 	end if;
 end process;
@@ -50,7 +52,7 @@ begin
 			E2<='1';
 			E3<='0';
 			C<='0';
-			if(KEY(1)='0') then
+			if(BTN1='0') then
 				PEstado <= GAME;
 			else
 				PEstado <= SETUP;

@@ -64,6 +64,7 @@ lerom0: ROM0 port map (vL, vrom0);
 lerom1: ROM1 port map (vL, vrom1);
 lerom2: ROM2 port map (vL, vrom2);
 lerom3: ROM3 port map (vL, vrom3);
-selmem: multiplexador4 port map (vrom0, vrom1, vrom2. vrom3, vROM, vLrom);
+selmem: multiplexador4 port map (vrom0(7 downto 0), vrom1(7 downto 0), vrom2(7 downto 0),
+ vrom3(7 downto 0), vROM (1 downto 0), vLrom(7 downto 0));
 
 end selecionaRomArch;

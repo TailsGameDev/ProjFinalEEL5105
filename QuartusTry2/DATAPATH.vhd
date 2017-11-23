@@ -18,7 +18,7 @@ port (    E1: in std_logic;
        HEX0: out std_logic_vector (6 downto 0);
        LEDR: out std_logic_vector (9 downto 0);
           M: out std_logic;
-	  	 CG: out std_logic
+	  	CGout: out std_logic
 );
 end DATAPATH;
 
@@ -31,10 +31,12 @@ signal     lplus:    std_logic_vector (3 downto 0);
 signal      Ptos:    std_logic_vector (3 downto 0);
 signal        Nv:    std_logic_vector (1 downto 0);
 signal       ROM:    std_logic_vector (1 downto 0);
-signal     FPtos:    std_logic_vector (3 downto 0);
+signal     FPtos:    std_logic_vector (7 downto 0);
 signal        E4:    std_logic;
 signal   sigPtos:    std_logic_vector (3 downto 0);
 signal      roml:    std_logic_vector (7 downto 0);
+signal        CG:    std_logic;
+signal       vCG:    std_logic;
 
 
    --components
@@ -108,12 +110,14 @@ end component;
 component selecionaRom is
 port (
 		 ROM: in std_logic_vector (1 downto 0);
-		  vl: in std_logic_vector (3 downto 0);
-   	  vroml: out std_logic_vector (7 downto 0)
-);
+		   L: in std_logic_vector (3 downto 0);
+      Lrom: out std_logic_vector (7 downto 0)
+); 
 end component;
 
 begin
+
+CGout <= CG;
 
 lplus <= l + '1';
  HEX5 <= "1000111";
@@ -128,10 +132,10 @@ lplus <= l + '1';
 
  --registradores
 
-regl: registrador4 port map (CG, E1, C, lplus          , l    );
-reg2: registrador4 port map (CG, E4, C, sigPtos        , Ptos );
-reg3: registrador2 port map (CG, E2, C, SW(9 downto 8) , Nv   );
-reg4: registrador2 port map (CG, E3, C, SW(1 downto 0) , ROM  );
+regl: registrador4 port map (vCG, E1, C, lplus          , l    );
+reg2: registrador4 port map (vCG, E4, C, sigPtos        , Ptos );
+reg3: registrador2 port map (vCG, E2, C, SW(9 downto 8) , Nv   );
+reg4: registrador2 port map (vCG, E3, C, SW(1 downto 0) , ROM  );
 
  --decodificadores
 
@@ -159,7 +163,7 @@ mux16: multiplexador16 port map
 
 dg: DeslocadorGeral port map(Ptos, Nv, Fptos);
 
---selecionador de memória
+--selecionador de memória 
 
 selctmem: selecionaRom port map(ROM, l, roml);
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for joguinhoTopper
-Thu Nov 23 11:55:44 2017
+Thu Nov 23 15:12:35 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -10,7 +10,24 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |joguinhoTopzudo|FSM:callfsm|EAtual
+  9. State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn3state
+ 10. State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn2state
+ 11. State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn1state
+ 12. State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn0state
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Port Connectivity Checks: "DATAPATH:calldtp|multiplexador16:mux16"
+ 18. Port Connectivity Checks: "DATAPATH:calldtp|decodificador:dhex4"
+ 19. Port Connectivity Checks: "ButtonSync:callbtns"
+ 20. Post-Synthesis Netlist Statistics for Top Partition
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +51,27 @@ agreement for further details.
 
 
 
-+--------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                             ;
-+-----------------------------+--------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Nov 23 11:55:44 2017          ;
-; Quartus II 64-Bit Version   ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
-; Revision Name               ; joguinhoTopper                             ;
-; Top-level Entity Name       ; joguinhoTop                                ;
-; Family                      ; Cyclone V                                  ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                  ;
-; Total registers             ; N/A until Partition Merge                  ;
-; Total pins                  ; N/A until Partition Merge                  ;
-; Total virtual pins          ; N/A until Partition Merge                  ;
-; Total block memory bits     ; N/A until Partition Merge                  ;
-; Total PLLs                  ; N/A until Partition Merge                  ;
-; Total DLLs                  ; N/A until Partition Merge                  ;
-+-----------------------------+--------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++---------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Nov 23 15:12:35 2017      ;
+; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                   ; joguinhoTopper                             ;
+; Top-level Entity Name           ; joguinhoTopzudo                            ;
+; Family                          ; Cyclone V                                  ;
+; Logic utilization (in ALMs)     ; N/A                                        ;
+; Total registers                 ; 0                                          ;
+; Total pins                      ; 67                                         ;
+; Total virtual pins              ; 0                                          ;
+; Total block memory bits         ; 0                                          ;
+; Total DSP Blocks                ; 0                                          ;
+; Total HSSI RX PCSs              ; 0                                          ;
+; Total HSSI PMA RX Deserializers ; 0                                          ;
+; Total HSSI TX PCSs              ; 0                                          ;
+; Total HSSI PMA TX Serializers   ; 0                                          ;
+; Total PLLs                      ; 0                                          ;
+; Total DLLs                      ; 0                                          ;
++---------------------------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -58,7 +80,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; joguinhoTop        ; joguinhoTopper     ;
+; Top-level entity name                                                           ; joguinhoTopzudo    ; joguinhoTopper     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -157,15 +179,338 @@ agreement for further details.
 +----------------------------+-------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+; ButtonSync.vhd                   ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ButtonSync.vhd      ;         ;
+; joguinhoTopzudo.vhd              ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/joguinhoTopzudo.vhd ;         ;
+; selecionaRom.vhd                 ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/selecionaRom.vhd    ;         ;
+; ROM3.vhd                         ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ROM3.vhd            ;         ;
+; ROM2.vhd                         ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ROM2.vhd            ;         ;
+; ROM1.vhd                         ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ROM1.vhd            ;         ;
+; ROM0.vhd                         ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ROM0.vhd            ;         ;
+; registrador4.vhd                 ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/registrador4.vhd    ;         ;
+; registrador2.vhd                 ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/registrador2.vhd    ;         ;
+; mux4e1b.vhd                      ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/mux4e1b.vhd         ;         ;
+; multiplexador16.vhd              ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/multiplexador16.vhd ;         ;
+; multiplexador4.vhd               ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/multiplexador4.vhd  ;         ;
+; FSM.vhd                          ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/FSM.vhd             ;         ;
+; DeslocadorGeral.vhd              ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/DeslocadorGeral.vhd ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/decodificador.vhd   ;         ;
+; DATAPATH.vhd                     ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/DATAPATH.vhd        ;         ;
+; ClockConvert.vhd                 ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/ClockConvert.vhd    ;         ;
+; Clock01.vhd                      ; yes             ; User VHDL File  ; C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/Clock01.vhd         ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 0              ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 0              ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 0              ;
+;     -- 5 input functions                    ; 0              ;
+;     -- 4 input functions                    ; 0              ;
+;     -- <=3 input functions                  ; 0              ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 67             ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; HEX5[0]~output ;
+; Maximum fan-out                             ; 1              ;
+; Total fan-out                               ; 67             ;
+; Average fan-out                             ; 0.50           ;
++---------------------------------------------+----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                       ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+; |joguinhoTopzudo           ; 0 (0)             ; 0 (0)        ; 0                 ; 0          ; 67   ; 0            ; |joguinhoTopzudo    ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |joguinhoTopzudo|FSM:callfsm|EAtual                      ;
++---------------+---------------+-------------+--------------+-------------+
+; Name          ; EAtual.RESULT ; EAtual.GAME ; EAtual.SETUP ; EAtual.INIT ;
++---------------+---------------+-------------+--------------+-------------+
+; EAtual.INIT   ; 0             ; 0           ; 0            ; 0           ;
+; EAtual.SETUP  ; 0             ; 0           ; 1            ; 1           ;
+; EAtual.GAME   ; 0             ; 1           ; 0            ; 1           ;
+; EAtual.RESULT ; 1             ; 0           ; 0            ; 1           ;
++---------------+---------------+-------------+--------------+-------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn3state                                    ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn3state.EsperaSoltar ; btn3state.SaidaAtiva ; btn3state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn3state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn3state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn3state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn2state                                    ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn2state.EsperaSoltar ; btn2state.SaidaAtiva ; btn2state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn2state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn2state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn2state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn1state                                    ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn1state.EsperaSoltar ; btn1state.SaidaAtiva ; btn1state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn1state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn1state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn1state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |joguinhoTopzudo|ButtonSync:callbtns|btn0state                                    ;
++-------------------------+------------------------+----------------------+-------------------------+
+; Name                    ; btn0state.EsperaSoltar ; btn0state.SaidaAtiva ; btn0state.EsperaApertar ;
++-------------------------+------------------------+----------------------+-------------------------+
+; btn0state.EsperaApertar ; 0                      ; 0                    ; 0                       ;
+; btn0state.SaidaAtiva    ; 0                      ; 1                    ; 1                       ;
+; btn0state.EsperaSoltar  ; 1                      ; 0                    ; 1                       ;
++-------------------------+------------------------+----------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++------------------------------------------------+---------------------------------------------+
+; Register name                                  ; Reason for Removal                          ;
++------------------------------------------------+---------------------------------------------+
+; DATAPATH:calldtp|registrador2:reg4|SAIDA[0,1]  ; Stuck at GND due to stuck port clock_enable ;
+; DATAPATH:calldtp|registrador2:reg3|SAIDA[0,1]  ; Stuck at GND due to stuck port clock_enable ;
+; DATAPATH:calldtp|registrador4:regl|SAIDA[0..3] ; Stuck at GND due to stuck port clock_enable ;
+; DATAPATH:calldtp|registrador4:reg2|SAIDA[0..3] ; Stuck at GND due to stuck port clock        ;
+; ButtonSync:callbtns|btn3state.SaidaAtiva       ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn3state.EsperaSoltar     ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn3state.EsperaApertar    ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn2state.SaidaAtiva       ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn2state.EsperaSoltar     ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn2state.EsperaApertar    ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn1state.EsperaSoltar     ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn0state.EsperaSoltar     ; Lost fanout                                 ;
+; FSM:callfsm|EAtual.INIT                        ; Lost fanout                                 ;
+; FSM:callfsm|EAtual.SETUP                       ; Lost fanout                                 ;
+; FSM:callfsm|EAtual.GAME                        ; Lost fanout                                 ;
+; FSM:callfsm|EAtual.RESULT                      ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn1state.EsperaApertar    ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn1state.SaidaAtiva       ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn0state.EsperaApertar    ; Lost fanout                                 ;
+; ButtonSync:callbtns|btn0state.SaidaAtiva       ; Lost fanout                                 ;
+; Total Number of Removed Registers = 28         ;                                             ;
++------------------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                 ;
++---------------------------------------------+--------------------------------+----------------------------------------------+
+; Register name                               ; Reason for Removal             ; Registers Removed due to This Register       ;
++---------------------------------------------+--------------------------------+----------------------------------------------+
+; DATAPATH:calldtp|registrador2:reg4|SAIDA[1] ; Stuck at GND                   ; DATAPATH:calldtp|registrador4:reg2|SAIDA[3], ;
+;                                             ; due to stuck port clock_enable ; DATAPATH:calldtp|registrador4:reg2|SAIDA[2], ;
+;                                             ;                                ; DATAPATH:calldtp|registrador4:reg2|SAIDA[1], ;
+;                                             ;                                ; DATAPATH:calldtp|registrador4:reg2|SAIDA[0]  ;
+; ButtonSync:callbtns|btn3state.SaidaAtiva    ; Lost Fanouts                   ; ButtonSync:callbtns|btn3state.EsperaApertar  ;
+; ButtonSync:callbtns|btn2state.SaidaAtiva    ; Lost Fanouts                   ; ButtonSync:callbtns|btn2state.EsperaApertar  ;
+; ButtonSync:callbtns|btn1state.EsperaSoltar  ; Lost Fanouts                   ; ButtonSync:callbtns|btn1state.EsperaApertar  ;
+; ButtonSync:callbtns|btn0state.EsperaSoltar  ; Lost Fanouts                   ; ButtonSync:callbtns|btn0state.EsperaApertar  ;
+; FSM:callfsm|EAtual.INIT                     ; Lost Fanouts                   ; ButtonSync:callbtns|btn0state.SaidaAtiva     ;
++---------------------------------------------+--------------------------------+----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex4|display[1] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex3|display[4] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |joguinhoTopzudo|DATAPATH:calldtp|decodificador:dhex4|display[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:calldtp|multiplexador16:mux16" ;
++-----------------+-------+----------+-------------------------------+
+; Port            ; Type  ; Severity ; Details                       ;
++-----------------+-------+----------+-------------------------------+
+; entrada1[9]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada1[8]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada1[7]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada1[6]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada1[5]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada1[4]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada1[3]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada1[2]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada1[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada1[0]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[9]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada2[8]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[7]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada2[6]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[5]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada2[4]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[3]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada2[2]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada2[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada2[0]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada3[9]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[8]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada3[7]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[6]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada3[5]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[4]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada3[3]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[2]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada3[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada3[0]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[9]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[8]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[7]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[6]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[5]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[4]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[3]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[2]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada4[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada4[0]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[9]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[8]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[7]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[6]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[5]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[4]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[3]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[2]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada5[1]     ; Input ; Info     ; Stuck at VCC                  ;
+; entrada5[0]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada6        ; Input ; Info     ; Stuck at VCC                  ;
+; entrada7[8..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada7[9]     ; Input ; Info     ; Stuck at GND                  ;
+; entrada8[7..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada8[9..8]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada9[6..0]  ; Input ; Info     ; Stuck at VCC                  ;
+; entrada9[9..7]  ; Input ; Info     ; Stuck at GND                  ;
+; entrada10[5..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada10[9..6] ; Input ; Info     ; Stuck at GND                  ;
+; entrada11[4..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada11[9..5] ; Input ; Info     ; Stuck at GND                  ;
+; entrada12[3..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada12[9..4] ; Input ; Info     ; Stuck at GND                  ;
+; entrada13[2..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada13[9..3] ; Input ; Info     ; Stuck at GND                  ;
+; entrada14[1..0] ; Input ; Info     ; Stuck at VCC                  ;
+; entrada14[9..2] ; Input ; Info     ; Stuck at GND                  ;
+; entrada15[9..1] ; Input ; Info     ; Stuck at GND                  ;
+; entrada15[0]    ; Input ; Info     ; Stuck at VCC                  ;
+; entrada16       ; Input ; Info     ; Stuck at GND                  ;
++-----------------+-------+----------+-------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:calldtp|decodificador:dhex4" ;
++---------------+-------+----------+-------------------------------+
+; Port          ; Type  ; Severity ; Details                       ;
++---------------+-------+----------+-------------------------------+
+; entrada[3..2] ; Input ; Info     ; Stuck at GND                  ;
++---------------+-------+----------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ButtonSync:callbtns"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; btn2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; btn3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 67                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Thu Nov 23 11:55:22 2017
+    Info: Processing started: Thu Nov 23 15:12:12 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off joguinhoTopper -c joguinhoTopper
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file buttonsync.vhd
+    Info (12022): Found design unit 1: ButtonSync-ButtonSyncImpl
+    Info (12023): Found entity 1: ButtonSync
+Info (12021): Found 2 design units, including 1 entities, in source file joguinhotopzudo.vhd
+    Info (12022): Found design unit 1: joguinhoTopzudo-joguinhoTopArch
+    Info (12023): Found entity 1: joguinhoTopzudo
 Info (12021): Found 2 design units, including 1 entities, in source file selecionarom.vhd
     Info (12022): Found design unit 1: selecionaRom-selecionaRomArch
     Info (12023): Found entity 1: selecionaRom
@@ -197,9 +542,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file multipl
 Info (12021): Found 2 design units, including 1 entities, in source file multiplexador4.vhd
     Info (12022): Found design unit 1: multiplexador4-mux
     Info (12023): Found entity 1: multiplexador4
-Info (12021): Found 2 design units, including 1 entities, in source file joguinhotop.vhd
-    Info (12022): Found design unit 1: joguinhoTopper-joguinhoTopArch
-    Info (12023): Found entity 1: joguinhoTopper
+Warning (12019): Can't analyze file -- file joguinhoTop.vhd is missing
 Warning (12019): Can't analyze file -- file halfadder.vhd is missing
 Warning (12019): Can't analyze file -- file fulladder.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file fsm.vhd
@@ -229,11 +572,133 @@ Info (12021): Found 2 design units, including 1 entities, in source file clock05
 Info (12021): Found 2 design units, including 1 entities, in source file clock01.vhd
     Info (12022): Found design unit 1: Clock01-Clock01Arch
     Info (12023): Found entity 1: Clock01
-Error (10448): VHDL error at selecionaRom.vhd(67): record type std_logic_vector is used but not declared File: C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/QuartusTry2/selecionaRom.vhd Line: 67
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 3 warnings
-    Error: Peak virtual memory: 777 megabytes
-    Error: Processing ended: Thu Nov 23 11:55:44 2017
-    Error: Elapsed time: 00:00:22
-    Error: Total CPU time (on all processors): 00:00:53
+Info (12127): Elaborating entity "joguinhoTopzudo" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at joguinhoTopzudo.vhd(31): object "BTN2" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at joguinhoTopzudo.vhd(32): object "BTN3" assigned a value but never read
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "ButtonSync:callbtns"
+Info (12128): Elaborating entity "DATAPATH" for hierarchy "DATAPATH:calldtp"
+Warning (10541): VHDL Signal Declaration warning at DATAPATH.vhd(36): used implicit default value for signal "sigPtos" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at DATAPATH.vhd(39): used implicit default value for signal "vCG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "registrador4" for hierarchy "DATAPATH:calldtp|registrador4:regl"
+Info (12128): Elaborating entity "registrador2" for hierarchy "DATAPATH:calldtp|registrador2:reg3"
+Info (12128): Elaborating entity "decodificador" for hierarchy "DATAPATH:calldtp|decodificador:dhex4"
+Info (12128): Elaborating entity "ClockConvert" for hierarchy "DATAPATH:calldtp|ClockConvert:conclock"
+Info (12128): Elaborating entity "Clock01" for hierarchy "DATAPATH:calldtp|ClockConvert:conclock|Clock01:convert01"
+Info (12128): Elaborating entity "mux4e1b" for hierarchy "DATAPATH:calldtp|ClockConvert:conclock|mux4e1b:decision"
+Info (12128): Elaborating entity "multiplexador16" for hierarchy "DATAPATH:calldtp|multiplexador16:mux16"
+Info (12128): Elaborating entity "DeslocadorGeral" for hierarchy "DATAPATH:calldtp|DeslocadorGeral:dg"
+Info (12128): Elaborating entity "selecionaRom" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem"
+Info (12128): Elaborating entity "ROM0" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|ROM0:lerom0"
+Info (12128): Elaborating entity "ROM1" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|ROM1:lerom1"
+Info (12128): Elaborating entity "ROM2" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|ROM2:lerom2"
+Info (12128): Elaborating entity "ROM3" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|ROM3:lerom3"
+Info (12128): Elaborating entity "multiplexador4" for hierarchy "DATAPATH:calldtp|selecionaRom:selctmem|multiplexador4:selmem"
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:callfsm"
+Warning (10492): VHDL Process Statement warning at FSM.vhd(56): signal "BTN1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX5[0]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
+    Warning (13410): Pin "HEX5[2]" is stuck at VCC
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[2]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[5]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[1]" is stuck at VCC
+    Warning (13410): Pin "LEDR[2]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at VCC
+    Warning (13410): Pin "LEDR[4]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at VCC
+    Warning (13410): Pin "LEDR[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at VCC
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at VCC
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored assignments for entity "ghrd_top" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity ghrd_top -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity ghrd_top -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[3]"
+    Warning (15610): No output dependent on input pin "SW[2]"
+    Warning (15610): No output dependent on input pin "SW[1]"
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
+Info (21057): Implemented 67 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 52 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 103 warnings
+    Info: Peak virtual memory: 794 megabytes
+    Info: Processing ended: Thu Nov 23 15:12:35 2017
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:52
 
 
