@@ -12,6 +12,7 @@ port (
 		E1: out std_logic;
 		E2: out std_logic;
 		E3: out std_logic;
+		E5: out std_logic;
 		C: out std_logic
 	);
 end FSM;
@@ -44,13 +45,20 @@ begin
 			E1<='0';
 			E2<='0';
 			E3<='0';
+			E5<='0';
 			C<='1';
-			PEstado <= SETUP;
+			if (BTN1='0') then
+				PEstado <= SETUP;
+			else
+				PEstado <= INIT;
+				
+			end if;
 
 		when SETUP =>
 			E1<='0';
 			E2<='1';
 			E3<='0';
+			E5<='0';
 			C<='0';
 			if(BTN1='0') then
 				PEstado <= GAME;
@@ -62,6 +70,7 @@ begin
 			E1<='1';
 			E2<='0';
 			E3<='0';
+			E5<='0';
 			C<='0';
 			if(M='0') then
 				PEstado <= RESULT;
@@ -74,8 +83,13 @@ begin
 			E1<='0';
 			E2<='0';
 			E3<='0';
+			E5<='1';
 			C<='0';
-			PEstado <= RESULT;
+			if (BTN1='0') then
+				PEstado <= INIT;
+			else	
+				PEstado <= RESULT;
+			end if;
 	end case;
 end process;
 

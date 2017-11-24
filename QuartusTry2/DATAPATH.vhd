@@ -7,6 +7,7 @@ entity DATAPATH is
 port (    E1: in std_logic;
 	      E2: in std_logic;
 	      E3: in std_logic;
+		  E5: In std_logic;
 	       C: in std_logic;
 	CLOCK_50: in std_logic;
 	  	  SW: in std_logic_vector (9 downto 0);
@@ -100,6 +101,7 @@ component DeslocadorGeral is
 port(
          Ptos: in std_logic_vector(3 downto 0);
          sinal: in std_logic_vector(1 downto 0); --Nv
+		 H: in std_logic;
          saida: out std_logic_vector(7 downto 0)
         );
 end component;
@@ -157,7 +159,7 @@ mux16: multiplexador16 port map
 
 --deslocador geral
 
-dg: DeslocadorGeral port map(Ptos, Nv, Fptos);
+dg: DeslocadorGeral port map(Ptos, Nv, E5, Fptos);
 
 --selecionador de memória 
 
