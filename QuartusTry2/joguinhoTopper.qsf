@@ -299,6 +299,7 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity ghrd_top -sect
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity ghrd_top -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top
+set_global_assignment -name VHDL_FILE DeslocadorGeral.vhd
 set_global_assignment -name VHDL_FILE ButtonSync.vhd
 set_global_assignment -name VHDL_FILE joguinhoTopzudo.vhd
 set_global_assignment -name VHDL_FILE selecionaRom.vhd
@@ -309,11 +310,9 @@ set_global_assignment -name VHDL_FILE ROM0.vhd
 set_global_assignment -name VHDL_FILE registrador4.vhd
 set_global_assignment -name VHDL_FILE registrador2.vhd
 set_global_assignment -name VHDL_FILE mux4e1b.vhd
-set_global_assignment -name VHDL_FILE Multiplicador.vhd
 set_global_assignment -name VHDL_FILE multiplexador16.vhd
 set_global_assignment -name VHDL_FILE multiplexador4.vhd
 set_global_assignment -name VHDL_FILE FSM.vhd
-set_global_assignment -name VHDL_FILE DeslocadorGeral.vhd
 set_global_assignment -name VHDL_FILE decodificador.vhd
 set_global_assignment -name VHDL_FILE DATAPATH.vhd
 set_global_assignment -name VHDL_FILE ClockConvert.vhd

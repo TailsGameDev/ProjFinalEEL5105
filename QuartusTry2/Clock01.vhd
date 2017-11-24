@@ -11,7 +11,7 @@ end Clock01;
 
 architecture Clock01Arch of Clock01 is 
 
-signal cont: std_logic_vector(27 downto 0);
+signal cont: std_logic_vector(31 downto 0);
 	
 begin
 	process(CLOCK_50)
@@ -21,8 +21,8 @@ begin
 			cont <= cont+1;
 		
 		
-			if (cont = x"4C4B40") then
-				cont <= x"0000000";
+			if (cont = x"1DCD64F6") then
+				cont <= x"00000000";
 				saida <= '1';
 			else
 				saida <= '0';

@@ -12,7 +12,9 @@ port (
 		E1: out std_logic;
 		E2: out std_logic;
 		E3: out std_logic;
-		E5: out std_logic;
+	  E54: out std_logic;
+	  E32: out std_logic;
+	  E10: out std_logic;
 		C: out std_logic
 	);
 end FSM;
@@ -38,14 +40,16 @@ begin
 end process;
 
 --process define o que ocorre em cada estado
-process(EAtual,M)
+process(EAtual, M, BTN1)
 begin
 	case EAtual is
 		when INIT =>
 			E1<='0';
 			E2<='0';
 			E3<='0';
-			E5<='0';
+		  E54<='0';
+		  E32<='0';
+		  E10<='0';
 			C<='1';
 			if (BTN1='0') then
 				PEstado <= SETUP;
@@ -57,8 +61,10 @@ begin
 		when SETUP =>
 			E1<='0';
 			E2<='1';
-			E3<='0';
-			E5<='0';
+			E3<='1';
+		  E54<='1';
+		  E32<='0';
+		  E10<='0';
 			C<='0';
 			if(BTN1='0') then
 				PEstado <= GAME;
@@ -70,7 +76,9 @@ begin
 			E1<='1';
 			E2<='0';
 			E3<='0';
-			E5<='0';
+		  E54<='1';
+		  E32<='0';
+		  E10<='1';
 			C<='0';
 			if(M='0') then
 				PEstado <= RESULT;
@@ -83,7 +91,9 @@ begin
 			E1<='0';
 			E2<='0';
 			E3<='0';
-			E5<='1';
+		  E54<='1';
+		  E32<='1';
+		  E10<='0';
 			C<='0';
 			if (BTN1='0') then
 				PEstado <= INIT;
