@@ -7,7 +7,9 @@ entity DATAPATH is
 port (    E1: in std_logic;
 	      E2: in std_logic;
 	      E3: in std_logic;
-		  E5: In std_logic;
+		  E54: in std_logic;
+		  E32: in std_logic;
+		  E10: in std_logic;
 	       C: in std_logic;
 	CLOCK_50: in std_logic;
 	  	  SW: in std_logic_vector (9 downto 0);
@@ -36,6 +38,11 @@ signal        E4:    std_logic;
 signal   sigPtos:    std_logic_vector (3 downto 0);
 signal      romL:    std_logic_vector (7 downto 0);
 signal        CG:    std_logic;
+signal     vHEX4:    std_logic_vector (6 downto 0);
+signal     vHEX3:    std_logic_vector (6 downto 0);
+signal     vHEX2:    std_logic_vector (6 downto 0);
+signal     vHEX1:    std_logic_vector (6 downto 0);
+signal     vHEX0:    std_logic_vector (6 downto 0);
 
    --components
 
@@ -62,8 +69,9 @@ end component;
 	component decodificador is
 
     port(entrada: in std_logic_vector(3 downto 0);
-         display: out std_logic_vector(6 downto 0)         
-    );
+			 enable: in std_logic;
+        display: out std_logic_vector(6 downto 0)         
+    );      
 end component;
 
 component ClockConvert is
@@ -101,7 +109,6 @@ component DeslocadorGeral is
 port(
          Ptos: in std_logic_vector(3 downto 0);
          sinal: in std_logic_vector(1 downto 0); --Nv
-		 H: in std_logic;
          saida: out std_logic_vector(7 downto 0)
         );
 end component;
@@ -118,7 +125,18 @@ begin
 
 Lplus <= L + '1';
 sigPtos <= Ptos + '1';
- HEX5 <= "1000111";
+ HEX5 <= "1000111" when E54 = '1' else "1111111";
+ HEX4 <= vHEX4;
+ HEX3 <= vHEX3;
+ HEX2 <= vHEX2;
+ HEX1 <= vHEX1;
+ HEX0 <= vHEX0;
+ --HEX4 <= "1"
+ 
+-- "1000000" when entrada = "0000" else
+  --             "1111001" when entrada = "0001" else
+    --           "0100100" when entrada = "0010" else
+      --         "0110000" when entrada = "0011" else
 
  --comparador de menor
  M <= '1' when (L < "1001") else
@@ -137,11 +155,11 @@ regROM:  registrador2 port map (CLOCK_50, E3, C, SW(1 downto 0) , ROM  );
 
  --decodificadores
 
-dhex4: decodificador port map(         "00" & Nv, HEX4);
-dhex3: decodificador port map(Fptos (7 downto 4), HEX3);
-dhex2: decodificador port map(Fptos (3 downto 0), HEX2);
-dhex1: decodificador port map( roml(7 downto 4) , HEX1);
-dhex0: decodificador port map( roml(3 downto 0) , HEX0);
+dhex4: decodificador port map(         "00" & Nv, E54, vHEX4);
+dhex3: decodificador port map(Fptos (7 downto 4), E32, vHEX3);
+dhex2: decodificador port map(Fptos (3 downto 0), E32, vHEX2);
+dhex1: decodificador port map( roml(7 downto 4) , E10, vHEX1);
+dhex0: decodificador port map( roml(3 downto 0) , E10, vHEX0);
 
 -- clock convert
 
@@ -159,7 +177,7 @@ mux16: multiplexador16 port map
 
 --deslocador geral
 
-dg: DeslocadorGeral port map(Ptos, Nv, E5, Fptos);
+dg: DeslocadorGeral port map(Ptos, Nv, Fptos);
 
 --selecionador de memória 
 

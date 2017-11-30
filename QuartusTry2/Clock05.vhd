@@ -21,7 +21,7 @@ begin
 			cont <= cont+1;
 		
 		
-			if (cont = x"17D7840") then
+			if (cont = x"5F5E0FE") then
 				cont <= x"0000000";
 				saida <= '1';
 			else
