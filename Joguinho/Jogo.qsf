@@ -46,18 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
-set_global_assignment -name VHDL_FILE div_freq.vhd
-set_global_assignment -name VHDL_FILE mux_4x1.vhd
-set_global_assignment -name VHDL_FILE comparador.vhd
-set_global_assignment -name VHDL_FILE pontos.vhd
-set_global_assignment -name VHDL_FILE decod_led.vhd
-set_global_assignment -name VHDL_FILE controle.vhd
-set_global_assignment -name VHDL_FILE reg_2.vhd
-set_global_assignment -name VHDL_FILE decod_nv.vhd
-set_global_assignment -name VHDL_FILE contador_end.vhd
-set_global_assignment -name VHDL_FILE transform.vhd
-set_global_assignment -name VHDL_FILE datapath.vhd
-set_global_assignment -name VHDL_FILE topo.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -308,7 +296,27 @@ set_global_assignment -name PARTITION_COLOR 16764057 -entity ghrd_top -section_i
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity ghrd_top -section_id Top
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
-set_global_assignment -name VHDL_FILE comparador&pont.vhd
-set_global_assignment -name VHDL_FILE comparadorpont.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_FILE topo.vhd
+set_global_assignment -name VHDL_FILE ROM4.vhd
+set_global_assignment -name VHDL_FILE ROM3.vhd
+set_global_assignment -name VHDL_FILE ROM2.vhd
+set_global_assignment -name VHDL_FILE ROM1.vhd
+set_global_assignment -name VHDL_FILE reg_2.vhd
+set_global_assignment -name VHDL_FILE reg.vhd
+set_global_assignment -name VHDL_FILE pontos.vhd
+set_global_assignment -name VHDL_FILE mux_4x1.vhd
+set_global_assignment -name VHDL_FILE mux.vhd
+set_global_assignment -name VHDL_FILE div_freq.vhd
+set_global_assignment -name VHDL_FILE decod7seg.vhd
+set_global_assignment -name VHDL_FILE decod_nv.vhd
+set_global_assignment -name VHDL_FILE decod_led.vhd
+set_global_assignment -name VHDL_FILE decod_4.vhd
+set_global_assignment -name VHDL_FILE datapath.vhd
+set_global_assignment -name VHDL_FILE controle.vhd
+set_global_assignment -name VHDL_FILE contador_end.vhd
 set_global_assignment -name VHDL_FILE comparadorponto.vhd
+set_global_assignment -name VHDL_FILE comparador.vhd
+set_global_assignment -name VHDL_FILE ButtonSync.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

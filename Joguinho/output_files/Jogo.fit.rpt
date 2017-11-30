@@ -1,5 +1,5 @@
 Fitter report for Jogo
-Wed Nov 29 10:58:11 2017
+Thu Nov 30 21:14:47 2017
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed Nov 29 10:58:11 2017      ;
+; Fitter Status                   ; Successful - Thu Nov 30 21:14:47 2017      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; Jogo                                       ;
 ; Top-level Entity Name           ; topo                                       ;
@@ -153,12 +153,12 @@ agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.25        ;
+; Average used               ; 1.27        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  24.6%      ;
+;     Processor 2            ;  26.9%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -471,7 +471,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/output_files/Jogo.pin.
+The pin-out file can be found in C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/output_files/Jogo.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -2353,34 +2353,34 @@ Warning (15705): Ignored locations or region assignments to the following nodes
 Info (11798): Fitter preparation operations ending: elapsed time is 00:00:36
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:06
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:08
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:08
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:10
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X78_Y0 to location X89_Y10
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:12
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:18
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 1.95 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 2.15 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:13
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:15
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
-Info (144001): Generated suppressed messages file C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/output_files/Jogo.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/output_files/Jogo.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 180 warnings
-    Info: Peak virtual memory: 2103 megabytes
-    Info: Processing ended: Wed Nov 29 10:58:15 2017
-    Info: Elapsed time: 00:02:16
-    Info: Total CPU time (on all processors): 00:02:23
+    Info: Peak virtual memory: 2107 megabytes
+    Info: Processing ended: Thu Nov 30 21:14:51 2017
+    Info: Elapsed time: 00:02:35
+    Info: Total CPU time (on all processors): 00:02:42
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/output_files/Jogo.fit.smsg.
+The suppressed messages can be found in C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/output_files/Jogo.fit.smsg.
 
 

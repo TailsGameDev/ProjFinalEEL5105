@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 15.0.0 Build 145 04/22/2015 SJ Web Edition"
 
--- DATE "11/29/2017 10:59:36"
+-- DATE "11/30/2017 21:16:30"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -40,14 +40,14 @@ ENTITY 	topo IS
     PORT (
 	CLOCK_50 : IN std_logic;
 	KEY : IN std_logic_vector(5 DOWNTO 0);
-	HEX0 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX1 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX2 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX3 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX4 : OUT std_logic_vector(6 DOWNTO 0);
-	HEX5 : OUT std_logic_vector(6 DOWNTO 0);
+	HEX0 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX1 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX2 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX3 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX4 : BUFFER std_logic_vector(6 DOWNTO 0);
+	HEX5 : BUFFER std_logic_vector(6 DOWNTO 0);
 	SW : IN std_logic_vector(9 DOWNTO 0);
-	LEDR : OUT std_logic_vector(9 DOWNTO 0)
+	LEDR : BUFFER std_logic_vector(9 DOWNTO 0)
 	);
 END topo;
 
@@ -562,16 +562,6 @@ SIGNAL \D|D|contador1\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \D|Re3|Q\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \D|Re1|Q\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \D|R5|Q\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \ALT_INV_SW[3]~input_o\ : std_logic;
-SIGNAL \ALT_INV_KEY[0]~input_o\ : std_logic;
-SIGNAL \ALT_INV_KEY[1]~input_o\ : std_logic;
-SIGNAL \ALT_INV_SW[9]~input_o\ : std_logic;
-SIGNAL \ALT_INV_SW[0]~input_o\ : std_logic;
-SIGNAL \D|D4|ALT_INV_leds[2]~9_combout\ : std_logic;
-SIGNAL \D|D4|ALT_INV_leds[4]~8_combout\ : std_logic;
-SIGNAL \D|D4|ALT_INV_leds[6]~7_combout\ : std_logic;
-SIGNAL \D|D4|ALT_INV_leds[8]~6_combout\ : std_logic;
-SIGNAL \D|D|ALT_INV_Equal0~6_combout\ : std_logic;
 SIGNAL \D|D|ALT_INV_Equal0~5_combout\ : std_logic;
 SIGNAL \D|D|ALT_INV_Equal0~4_combout\ : std_logic;
 SIGNAL \D|D|ALT_INV_Equal0~3_combout\ : std_logic;
@@ -652,6 +642,16 @@ SIGNAL \D|D|ALT_INV_contador1\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \D|D|ALT_INV_contador2\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \D|D|ALT_INV_contador3\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \D|D|ALT_INV_contador4\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \ALT_INV_SW[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_KEY[0]~input_o\ : std_logic;
+SIGNAL \ALT_INV_KEY[1]~input_o\ : std_logic;
+SIGNAL \ALT_INV_SW[9]~input_o\ : std_logic;
+SIGNAL \ALT_INV_SW[0]~input_o\ : std_logic;
+SIGNAL \D|D4|ALT_INV_leds[2]~9_combout\ : std_logic;
+SIGNAL \D|D4|ALT_INV_leds[4]~8_combout\ : std_logic;
+SIGNAL \D|D4|ALT_INV_leds[6]~7_combout\ : std_logic;
+SIGNAL \D|D4|ALT_INV_leds[8]~6_combout\ : std_logic;
+SIGNAL \D|D|ALT_INV_Equal0~6_combout\ : std_logic;
 
 BEGIN
 
@@ -668,16 +668,6 @@ LEDR <= ww_LEDR;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_SW[3]~input_o\ <= NOT \SW[3]~input_o\;
-\ALT_INV_KEY[0]~input_o\ <= NOT \KEY[0]~input_o\;
-\ALT_INV_KEY[1]~input_o\ <= NOT \KEY[1]~input_o\;
-\ALT_INV_SW[9]~input_o\ <= NOT \SW[9]~input_o\;
-\ALT_INV_SW[0]~input_o\ <= NOT \SW[0]~input_o\;
-\D|D4|ALT_INV_leds[2]~9_combout\ <= NOT \D|D4|leds[2]~9_combout\;
-\D|D4|ALT_INV_leds[4]~8_combout\ <= NOT \D|D4|leds[4]~8_combout\;
-\D|D4|ALT_INV_leds[6]~7_combout\ <= NOT \D|D4|leds[6]~7_combout\;
-\D|D4|ALT_INV_leds[8]~6_combout\ <= NOT \D|D4|leds[8]~6_combout\;
-\D|D|ALT_INV_Equal0~6_combout\ <= NOT \D|D|Equal0~6_combout\;
 \D|D|ALT_INV_Equal0~5_combout\ <= NOT \D|D|Equal0~5_combout\;
 \D|D|ALT_INV_Equal0~4_combout\ <= NOT \D|D|Equal0~4_combout\;
 \D|D|ALT_INV_Equal0~3_combout\ <= NOT \D|D|Equal0~3_combout\;
@@ -903,6 +893,16 @@ ww_devpor <= devpor;
 \D|D|ALT_INV_contador4\(11) <= NOT \D|D|contador4\(11);
 \D|D|ALT_INV_contador4\(12) <= NOT \D|D|contador4\(12);
 \D|D|ALT_INV_contador4\(6) <= NOT \D|D|contador4\(6);
+\ALT_INV_SW[3]~input_o\ <= NOT \SW[3]~input_o\;
+\ALT_INV_KEY[0]~input_o\ <= NOT \KEY[0]~input_o\;
+\ALT_INV_KEY[1]~input_o\ <= NOT \KEY[1]~input_o\;
+\ALT_INV_SW[9]~input_o\ <= NOT \SW[9]~input_o\;
+\ALT_INV_SW[0]~input_o\ <= NOT \SW[0]~input_o\;
+\D|D4|ALT_INV_leds[2]~9_combout\ <= NOT \D|D4|leds[2]~9_combout\;
+\D|D4|ALT_INV_leds[4]~8_combout\ <= NOT \D|D4|leds[4]~8_combout\;
+\D|D4|ALT_INV_leds[6]~7_combout\ <= NOT \D|D4|leds[6]~7_combout\;
+\D|D4|ALT_INV_leds[8]~6_combout\ <= NOT \D|D4|leds[8]~6_combout\;
+\D|D|ALT_INV_Equal0~6_combout\ <= NOT \D|D|Equal0~6_combout\;
 
 -- Location: IOOBUF_X89_Y8_N39
 \HEX0[0]~output\ : cyclonev_io_obuf
