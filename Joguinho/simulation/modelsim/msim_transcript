@@ -1,0 +1,69 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# do Jogo_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/div_freq.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:50:32 on Nov 30,2017
+# vcom -reportprogress 300 -93 -work work C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/div_freq.vhd 
+# -- Loading package STANDARD
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/rtl_work/_lib.qdb): unable to open database file
+# mtilibWrite(): Unexpected null object encountered
+# ** Fatal: (vcom-9) Problem while writing token file "C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/rtl_work/_temp/vcom5rcfq5".
+# 
+# O sistema não pode encontrar o caminho especificado. (GetLastError() = 3)
+# ** Error: C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/div_freq.vhd(1): VHDL Compiler exiting
+# End time: 13:50:32 on Nov 30,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/altera/15.0/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./Jogo_run_msim_rtl_vhdl.do line 8
+# C:/altera/15.0/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/div_freq.vhd}"
+vmap -del work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet -del work 
+# Removing reference to logical library work
+# Modifying modelsim.ini
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+vcom -reportprogress 300 -work work {C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:52:34 on Nov 30,2017
+# vcom -reportprogress 300 -work work C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho 
+# -- Loading package STANDARD
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/work/_lib.qdb): unable to open database file
+# mtilibWrite(): Unexpected null object encountered
+# ** Fatal: (vcom-9) Problem while writing token file "C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/work/_temp/vcom5xhszc".
+# 
+# O sistema não pode encontrar o caminho especificado. (GetLastError() = 3)
+# ** Error: C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho(30): VHDL Compiler exiting
+# End time: 13:52:35 on Nov 30,2017, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+vcom -reportprogress 300 -work work {C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:53:12 on Nov 30,2017
+# vcom -reportprogress 300 -work work C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho 
+# -- Loading package STANDARD
+# init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/work/_lib.qdb): unable to open database file
+# mtilibWrite(): Unexpected null object encountered
+# ** Fatal: (vcom-9) Problem while writing token file "C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/work/_temp/vcom1sdfht".
+# 
+# O sistema não pode encontrar o caminho especificado. (GetLastError() = 3)
+# ** Error: C:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim/Jogo.vho(30): VHDL Compiler exiting
+# End time: 13:53:12 on Nov 30,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0

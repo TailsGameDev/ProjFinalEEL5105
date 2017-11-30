@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity contador_end is
+	port
+		(
+			enable, reset, clock: in std_logic;
+			endereco: out std_logic_vector(3 downto 0)
+		);
+end contador_end;
+
+architecture bhv of contador_end is
+
+	P: process(enable, reset, clock)
+	begin
+		if reset = '1' then
+			endereco <= "0000";
+		end if;
+		if clock'event and clock = '1' then
+			if enable = '1' then
+				endereco <= endereco + "0001";
+			end if;
+		end if;
+	end process;
+end bhv;
+		
