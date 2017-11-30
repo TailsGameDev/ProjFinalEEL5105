@@ -7,4 +7,381 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/kkaldas/Desktop/Faculdade/Circuitos e Técnicas Digitais/Joguinho/simulation/modelsim
+Z0 dC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/simulation/modelsim
+Econtador_end
+Z1 w1511527469
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/contador_end.vhd
+Z7 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/contador_end.vhd
+l0
+L6
+V]ag56=O?Xg?]QmmOSCknX2
+!s100 cSW89n7f]YJXGG<7eRLQL0
+Z8 OV;C;10.3d;59
+31
+Z9 !s110 1512060052
+!i10b 1
+Z10 !s108 1512060052.344000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/contador_end.vhd|
+Z12 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/contador_end.vhd|
+!i113 1
+Z13 o-93 -work work
+Z14 tExplicit 1
+Abhv
+R2
+R3
+R4
+R5
+DEx4 work 12 contador_end 0 22 ]ag56=O?Xg?]QmmOSCknX2
+l18
+L15
+VS^D^cS9NA09zn]?n`[eOk1
+!s100 aZjKaJ73_72Pm8:8?0h1M0
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Econtrole
+Z15 w1511528912
+R2
+R3
+R4
+R5
+R0
+Z16 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/controle.vhd
+Z17 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/controle.vhd
+l0
+L6
+V7Mz6Z8l^glJnlM;oiJMKB3
+!s100 D><hIzA;ngXQ:4T1PEkVh1
+R8
+31
+Z18 !s110 1512060049
+!i10b 1
+Z19 !s108 1512060049.655000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/controle.vhd|
+Z21 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/controle.vhd|
+!i113 1
+R13
+R14
+Aestados
+R2
+R3
+R4
+R5
+DEx4 work 8 controle 0 22 7Mz6Z8l^glJnlM;oiJMKB3
+l18
+L14
+V;F?VbNma_P_mlzLa1mUGK0
+!s100 BI=L[YC_2KM3N3]b1E`O51
+R8
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R13
+R14
+Edatapath
+w1511527683
+R2
+R3
+R4
+R5
+R0
+8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/datapath.vhd
+FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/datapath.vhd
+l0
+L6
+VfPLAh2KN8CQM5Rd_[6fT83
+!s100 N7W_cJbPm0E4f;JImD8=`3
+R8
+31
+!s110 1512060053
+!i10b 1
+!s108 1512060053.203000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/datapath.vhd|
+!s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/datapath.vhd|
+!i113 1
+R13
+R14
+Edecod_led
+Z22 w1511520205
+R2
+R3
+R4
+R5
+R0
+Z23 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_led.vhd
+Z24 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_led.vhd
+l0
+L6
+V8R9HI>5_>iikVRGbZDQhE2
+!s100 Mzn7H_0R>dRzOKP7:3?fk3
+R8
+31
+Z25 !s110 1512060048
+!i10b 1
+Z26 !s108 1512060048.712000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_led.vhd|
+Z28 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_led.vhd|
+!i113 1
+R13
+R14
+Astruct
+R2
+R3
+R4
+R5
+DEx4 work 9 decod_led 0 22 8R9HI>5_>iikVRGbZDQhE2
+l16
+L15
+VoRSZWDYDCCMhRXOg=^9[A2
+!s100 9f4HAR[FMPA_OADCYI;`L3
+R8
+31
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R13
+R14
+Edecod_nv
+R22
+R2
+R3
+R4
+R5
+R0
+Z29 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_nv.vhd
+Z30 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_nv.vhd
+l0
+L6
+VA`3UniHLKaHT8ml12e3ib0
+!s100 ]6De[bIH]bOF4<afUm=^V0
+R8
+31
+Z31 !s110 1512060051
+!i10b 1
+Z32 !s108 1512060051.461000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_nv.vhd|
+Z34 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/decod_nv.vhd|
+!i113 1
+R13
+R14
+Acircuito
+R2
+R3
+R4
+R5
+DEx4 work 8 decod_nv 0 22 A`3UniHLKaHT8ml12e3ib0
+l15
+L14
+VCS3cmZAmF;dYY0`Q3ZHL<0
+!s100 aT1]<=C7iUHYUV6zmgl:h0
+R8
+31
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R13
+R14
+Ediv_freq
+R1
+R2
+R3
+R4
+R5
+R0
+Z35 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/div_freq.vhd
+Z36 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/div_freq.vhd
+l0
+L6
+V^KC]lQhO6=7:^BO:;BF=a3
+!s100 <]k=PJPZ39Y:QZQ>>leVo0
+R8
+31
+Z37 !s110 1512060046
+!i10b 1
+Z38 !s108 1512060046.868000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/div_freq.vhd|
+Z40 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/div_freq.vhd|
+!i113 1
+R13
+R14
+Aoi
+R2
+R3
+R4
+R5
+DEx4 work 8 div_freq 0 22 ^KC]lQhO6=7:^BO:;BF=a3
+l20
+L14
+VF6zd_ljZKi8_6F`_CDVl53
+!s100 SzRRNW;Nf6Za?BHJUW0ES0
+R8
+31
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R13
+R14
+Emux_4x1
+Z41 w1511405338
+R2
+R3
+R4
+R5
+R0
+Z42 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/mux_4x1.vhd
+Z43 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/mux_4x1.vhd
+l0
+L6
+VCVFmWMaA@h4BDHn8GARW;3
+!s100 6ONbm<SbUcl:@oG92>_OQ2
+R8
+31
+Z44 !s110 1512060047
+!i10b 1
+Z45 !s108 1512060047.805000
+Z46 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/mux_4x1.vhd|
+Z47 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/mux_4x1.vhd|
+!i113 1
+R13
+R14
+Aselec
+R2
+R3
+R4
+R5
+DEx4 work 7 mux_4x1 0 22 CVFmWMaA@h4BDHn8GARW;3
+l16
+L15
+VXCmBU<YOXE^6J__<h5:YD3
+!s100 Y`0Z;`fOccN`I@3hR_lI@0
+R8
+31
+R44
+!i10b 1
+R45
+R46
+R47
+!i113 1
+R13
+R14
+Ereg_2
+Z48 w1511401261
+R2
+R3
+R4
+R5
+R0
+Z49 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/reg_2.vhd
+Z50 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/reg_2.vhd
+l0
+L6
+VbR2gQGEJjacWk76SADM[<3
+!s100 17k[flE0JdF<02F>T``nV1
+R8
+31
+Z51 !s110 1512060050
+!i10b 1
+Z52 !s108 1512060050.593000
+Z53 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/reg_2.vhd|
+Z54 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/reg_2.vhd|
+!i113 1
+R13
+R14
+Abehv
+R2
+R3
+R4
+R5
+DEx4 work 5 reg_2 0 22 bR2gQGEJjacWk76SADM[<3
+l15
+L14
+VGI=X<Z`HcgD=Kn3SW9YY70
+!s100 BR[RY=Lk<M=KB]:EhoWEF2
+R8
+31
+R51
+!i10b 1
+R52
+R53
+R54
+!i113 1
+R13
+R14
+Etopo
+Z55 w1511960376
+Z56 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 F4?8H@AVP;^e9M1j^UT:m0
+Z57 DPx8 cyclonev 19 cyclonev_components 0 22 [oXPE7T5CiffkAjNK>1^_0
+Z58 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 h=WEPgg^KP4dRbKHbJLS:0
+Z59 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z60 DPx6 altera 11 dffeas_pack 0 22 UnfbeWGEe]KW7:DTn;?VS1
+Z61 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R4
+R5
+Z62 DPx6 altera 28 altera_primitives_components 0 22 ]KYk:P<?aKG^=ZNSeb8Pf3
+R0
+Z63 8C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/simulation/modelsim/Jogo.vho
+Z64 FC:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/simulation/modelsim/Jogo.vho
+l0
+L39
+VDF34z2_cREQ=0>7j8bg6Q3
+!s100 Dg[BC6WGV=CRoAF:9]UI73
+R8
+32
+Z65 !s110 1512060345
+!i10b 1
+Z66 !s108 1512060345.245000
+Z67 !s90 -reportprogress|300|-work|work|C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/simulation/modelsim/Jogo.vho|
+Z68 !s107 C:/Users/kkaldas/Documents/GitHub/ProjFinalEEL5105/Joguinho/simulation/modelsim/Jogo.vho|
+!i113 1
+Z69 o-work work
+R14
+Astructure
+R56
+R57
+R58
+R59
+R60
+R61
+R4
+R5
+R62
+DEx4 work 4 topo 0 22 DF34z2_cREQ=0>7j8bg6Q3
+l656
+L126
+Vf8I?Lfh9VR_0bR@2JSW<:0
+!s100 IO[HN5]bdBi_IF<ih[2kh1
+R8
+32
+R65
+!i10b 1
+R66
+R67
+R68
+!i113 1
+R69
+R14
