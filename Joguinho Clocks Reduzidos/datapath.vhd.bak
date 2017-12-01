@@ -1,0 +1,192 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity datapath is
+port
+(
+	E0, E1, E2, E3, E4, R0, R1, R2, R3, R4, Rc, CLOCK_50: in std_logic;
+	
+	LEDR, SW: out std_logic_vector(9 downto 0);
+	
+	HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
+);
+end datapath;
+
+architecture bhv of datapath is
+signal BTN0, BTN1, BTN2, BTN3, OP1, OP2, OP3, OP4, check: std_logic;
+signal nivel, r_esc: std_logic_vector(1 downto 0);
+signal endereco, pontuacao: std_logic_vector(3 downto 0);
+signal EROM1, EROM2, EROM3, EROM4, valor_r, pont_prov: std_logic_vector(7 downto 0);
+
+	component decod_led is
+		port
+		(
+			pontos: in std_logic_vector(3 downto 0);
+			leds: out std_logic_vector(9 downto 0);
+		);
+	end component;
+
+
+	component pontos is
+		port
+		(
+			enable, reset, clock: in std_logic;
+			pont: out std_logic_vector(3 downto 0);
+		);
+	end component;
+
+	component comparador is
+		port
+		(
+			entrada_rom, entrada_usr: in std_logic_vector(7 downto 0);
+			certo: out std_logic;
+		);
+	end component;
+
+	component mux_4x1 is
+		port
+		(
+			sel: in std_logic_vector(1 downto 0);
+			F1, F2, F3, F4: in std_logic;
+			S: out std_logic_vector
+		);
+	end component;
+
+
+	component div_freq is
+		port
+		(
+			reset, enable, clock: in std_logic;
+			S1, S2, S3, S4: out std_logic;
+		);
+	end component;
+
+
+	component ROM1 is
+		port ( 	address : in std_logic_vector(3 downto 0);
+					data : out std_logic_vector(7 downto 0) );
+	end component;
+
+
+	component ROM2 is
+		port ( 	address : in std_logic_vector(3 downto 0);
+					data : out std_logic_vector(7 downto 0) );
+	end component;
+	
+
+	component ROM3 is
+		port ( 	address : in std_logic_vector(3 downto 0);
+					data : out std_logic_vector(7 downto 0) );
+	end component;
+	
+
+	component ROM4 is
+		port ( 	address : in std_logic_vector(3 downto 0);
+					data : out std_logic_vector(7 downto 0) );
+	end component;
+
+	component reg is
+		port (
+					reset, enable, CLK: in std_logic;
+					data: in std_logic_vector(7 downto 0);
+					Q: out std_logic_vector(7 downto 0)
+				);
+	end component;
+
+
+	component decod_4 is
+		port (
+				G: in std_logic_vector(3 downto 0);
+				D: out std_logic_vector(6 downto 0)
+				 );
+	end component;
+
+
+	component mux is
+		port
+			(
+				sel: in std_logic_vector(1 downto 0);
+				F1, F2, F3, F4: in std_logic_vector(7 downto 0);
+				S: out std_logic_vector(7 downto 0)
+			);
+	end component;
+
+
+	component ButtonSync is
+		port
+		(
+			KEY0, KEY1, KEY2, KEY3, CLK: in std_logic;
+			BTN0, BTN1, BTN2, BTN3: out std_logic
+		);
+	end component;
+
+
+	component decod_nv is
+		port (
+				G: in std_logic_vector(1 downto 0);
+				D: out std_logic_vector(6 downto 0)
+				);
+	end component;
+
+
+	component reg_2 is
+		port (
+					reset, enable, CLK: in std_logic;
+					data: in std_logic_vector(1 downto 0);
+					Q: out std_logic_vector(1 downto 0)
+				);
+	end component;
+	
+	component contador_end is
+		port
+		(
+			enable, reset, clock: in std_logic;
+			endereco: out std_logic_vector(3 downto 0);
+			acabou: out std_logic
+		);
+	end component;
+	
+	component transform is
+		port
+			(
+				entrada: in std_logic_vector(3 downto 0);
+				saida: out std_logic_vector(7 downto 0)
+			);
+	end component;
+
+	begin
+	
+	D: div_freq port map(R0, E0, CLOCK_50, OP1, OP2, OP3, OP4);
+	R1: reg_2 port map(R1, E1, CLOCK_50, SW(9 downto 8), nivel);
+	M1: mux_4x1 port map(nivel, OP1, OP2, OP3, OP4, clk);
+	D1: decod_nv port map(nivel, HEX4);
+	HEX5 <= "1000111";
+	E: contador_end port map(clk, Rc, CLOCK_50, endereco, acabou);
+	
+	R1: ROM1 port map(endereco, EROM1);
+	R2: ROM2 port map(endereco, EROM2);
+	R3: ROM3 port map(endereco, EROM3);
+	R4: ROM4 port map(endereco, EROM4);
+	
+	R2: reg_2 port map(R2, E2, CLOCK_50, SW(1 downto 0), r_esc);
+	M2: mux port map(r_esc, EROM1, EROM2, EROM3, EROM4, valor_r);
+	
+	D2: decod_4 port map(valor_r(7 downto 4), HEX1);
+	D3: decod_4 port map(valor_r(3 downto 0), HEX0);
+	
+	C: comparador port map(valor_r, SW(7 downto 0), check);
+	P: pontos port map(check, R3, pontuacao);
+	
+	D4: decod_led port map(pontuacao, LEDR);
+	
+	T: transform port map(pontuacao, pont_prov);
+	
+	M3: mux port map(nivel, pont_prov(7 downto 1) & '0', pont_prov(7 downto 2) & "00" pont_prov(7 downto 3) & "000", pont_prov(7 downto 4) & "0000", pontua);
+	R3: reg port map(R4, E4, CLOCK_50, pontua, pontuacao_final);
+	
+	D5: decod_4 port map(pontuacao_final(7 downto 4), HEX3);
+	D6: decod_4 port map(pontuacao_final(3 downto 0), HEX2);
+	
+end bhv;

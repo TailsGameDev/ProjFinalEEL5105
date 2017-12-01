@@ -1,0 +1,609 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/simulation/modelsim
+Edatapath
+Z1 w1512083237
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/datapath.vhd
+FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/datapath.vhd
+l0
+L6
+VfPLAh2KN8CQM5Rd_[6fT83
+!s100 N7W_cJbPm0E4f;JImD8=`3
+Z6 OV;C;10.3d;59
+31
+!s110 1512087355
+!i10b 1
+!s108 1512087355.712000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/datapath.vhd|
+!s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/datapath.vhd|
+!i113 1
+Z7 o-93 -work work
+Z8 tExplicit 1
+Edecod_4
+Z9 w1512083238
+R2
+R3
+R4
+R5
+R0
+Z10 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_4.vhd
+Z11 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_4.vhd
+l0
+L6
+VL^[;[2_PInYHj9`Zid<cO1
+!s100 BLTG`7EYQZW^TDVZgPHKW0
+R6
+31
+Z12 !s110 1512087354
+!i10b 1
+Z13 !s108 1512087354.713000
+Z14 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_4.vhd|
+Z15 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_4.vhd|
+!i113 1
+R7
+R8
+Acircuito
+R2
+R3
+R4
+R5
+DEx4 work 7 decod_4 0 22 L^[;[2_PInYHj9`Zid<cO1
+l15
+L14
+VPHD;3kZFB6ANRWZBDF9Q02
+!s100 6llMmB^@g6DB;Vj6UV_`c2
+R6
+31
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R7
+R8
+Edecod_led
+R9
+R2
+R3
+R4
+R5
+R0
+Z16 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_led.vhd
+Z17 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_led.vhd
+l0
+L6
+V8R9HI>5_>iikVRGbZDQhE2
+!s100 Mzn7H_0R>dRzOKP7:3?fk3
+R6
+31
+Z18 !s110 1512087353
+!i10b 1
+Z19 !s108 1512087353.534000
+Z20 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_led.vhd|
+Z21 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_led.vhd|
+!i113 1
+R7
+R8
+Astruct
+R2
+R3
+R4
+R5
+DEx4 work 9 decod_led 0 22 8R9HI>5_>iikVRGbZDQhE2
+l16
+L15
+VoRSZWDYDCCMhRXOg=^9[A2
+!s100 9f4HAR[FMPA_OADCYI;`L3
+R6
+31
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R7
+R8
+Edecod_nv
+R9
+R2
+R3
+R4
+R5
+R0
+Z22 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_nv.vhd
+Z23 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_nv.vhd
+l0
+L6
+VA`3UniHLKaHT8ml12e3ib0
+!s100 ]6De[bIH]bOF4<afUm=^V0
+R6
+31
+Z24 !s110 1512087352
+!i10b 1
+Z25 !s108 1512087352.378000
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_nv.vhd|
+Z27 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/decod_nv.vhd|
+!i113 1
+R7
+R8
+Acircuito
+R2
+R3
+R4
+R5
+DEx4 work 8 decod_nv 0 22 A`3UniHLKaHT8ml12e3ib0
+l15
+L14
+VCS3cmZAmF;dYY0`Q3ZHL<0
+!s100 aT1]<=C7iUHYUV6zmgl:h0
+R6
+31
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R7
+R8
+Ediv_freq
+Z28 w1512085343
+R2
+R3
+R4
+R5
+R0
+Z29 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/div_freq.vhd
+Z30 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/div_freq.vhd
+l0
+L6
+V^KC]lQhO6=7:^BO:;BF=a3
+!s100 <]k=PJPZ39Y:QZQ>>leVo0
+R6
+31
+Z31 !s110 1512087351
+!i10b 1
+Z32 !s108 1512087351.388000
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/div_freq.vhd|
+Z34 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/div_freq.vhd|
+!i113 1
+R7
+R8
+Aoi
+R2
+R3
+R4
+R5
+DEx4 work 8 div_freq 0 22 ^KC]lQhO6=7:^BO:;BF=a3
+l20
+L14
+VmNaNk_i_@48be]W<fOH6K3
+!s100 aa6jeV@?OzL:S5fj7YC[B2
+R6
+31
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R7
+R8
+Emux
+R9
+R2
+R3
+R4
+R5
+R0
+Z35 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux.vhd
+Z36 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux.vhd
+l0
+L6
+VJXE<LTMdmVYDh7QdE<H<d3
+!s100 i_M7JDf?2OU0]Co?FPfKg3
+R6
+31
+Z37 !s110 1512087350
+!i10b 1
+Z38 !s108 1512087350.430000
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux.vhd|
+Z40 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux.vhd|
+!i113 1
+R7
+R8
+Aselec
+R2
+R3
+R4
+R5
+DEx4 work 3 mux 0 22 JXE<LTMdmVYDh7QdE<H<d3
+l16
+L15
+V>LVEQZ[1XHj[0o7RZQn5D0
+!s100 id6kcP2f1?^aUNck:8L>i0
+R6
+31
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R7
+R8
+Emux_4x1
+R9
+R2
+R3
+R4
+R5
+R0
+Z41 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux_4x1.vhd
+Z42 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux_4x1.vhd
+l0
+L6
+VCVFmWMaA@h4BDHn8GARW;3
+!s100 6ONbm<SbUcl:@oG92>_OQ2
+R6
+31
+Z43 !s110 1512087349
+!i10b 1
+Z44 !s108 1512087349.499000
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux_4x1.vhd|
+Z46 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/mux_4x1.vhd|
+!i113 1
+R7
+R8
+Aselec
+R2
+R3
+R4
+R5
+DEx4 work 7 mux_4x1 0 22 CVFmWMaA@h4BDHn8GARW;3
+l16
+L15
+VXCmBU<YOXE^6J__<h5:YD3
+!s100 Y`0Z;`fOccN`I@3hR_lI@0
+R6
+31
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R7
+R8
+Ereg
+R9
+R2
+R3
+R4
+R5
+R0
+Z47 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg.vhd
+Z48 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg.vhd
+l0
+L6
+Vcmalm_f]<H78YE^njZ6WA2
+!s100 7fb7QZA?zkKVXCdAD64CR2
+R6
+31
+Z49 !s110 1512087348
+!i10b 1
+Z50 !s108 1512087348.585000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg.vhd|
+Z52 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg.vhd|
+!i113 1
+R7
+R8
+Abehv
+R2
+R3
+R4
+R5
+DEx4 work 3 reg 0 22 cmalm_f]<H78YE^njZ6WA2
+l15
+L14
+VlT]1EZCKQ[;mlYTXGegTj0
+!s100 H;_JGZNLQNNLzjOX`5?z]2
+R6
+31
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R7
+R8
+Ereg_2
+R9
+R2
+R3
+R4
+R5
+R0
+Z53 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg_2.vhd
+Z54 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg_2.vhd
+l0
+L6
+VbR2gQGEJjacWk76SADM[<3
+!s100 17k[flE0JdF<02F>T``nV1
+R6
+31
+Z55 !s110 1512087347
+!i10b 1
+Z56 !s108 1512087347.682000
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg_2.vhd|
+Z58 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/reg_2.vhd|
+!i113 1
+R7
+R8
+Abehv
+R2
+R3
+R4
+R5
+DEx4 work 5 reg_2 0 22 bR2gQGEJjacWk76SADM[<3
+l15
+L14
+VGI=X<Z`HcgD=Kn3SW9YY70
+!s100 BR[RY=Lk<M=KB]:EhoWEF2
+R6
+31
+R55
+!i10b 1
+R56
+R57
+R58
+!i113 1
+R7
+R8
+Erom1
+R1
+R4
+R5
+R0
+Z59 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM1.vhd
+Z60 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM1.vhd
+l0
+L4
+VgU6cGQJzoTez1e1C;Pl0[0
+!s100 KIoMzAaJlZPjG20=`o0=?1
+R6
+31
+Z61 !s110 1512087346
+!i10b 1
+Z62 !s108 1512087346.788000
+Z63 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM1.vhd|
+Z64 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM1.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R4
+R5
+DEx4 work 4 rom1 0 22 gU6cGQJzoTez1e1C;Pl0[0
+l23
+L9
+V:[>>25hKDR[MLo7Y<HnWi3
+!s100 P@L@FMLVS[J_CWmINHR:o2
+R6
+31
+R61
+!i10b 1
+R62
+R63
+R64
+!i113 1
+R7
+R8
+Erom2
+R1
+R4
+R5
+R0
+Z65 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM2.vhd
+Z66 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM2.vhd
+l0
+L4
+VVPVNQ^dAb[CYnJz?M>:;Q1
+!s100 FM[JOj4I@8FnT[f5ZdNZn1
+R6
+31
+Z67 !s110 1512087345
+!i10b 1
+Z68 !s108 1512087345.797000
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM2.vhd|
+Z70 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM2.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R4
+R5
+DEx4 work 4 rom2 0 22 VPVNQ^dAb[CYnJz?M>:;Q1
+l23
+L9
+VBlD_jCLYi3BigJ6RPN4Zl0
+!s100 `BdeIbNI6cQRQWVj;;B^i0
+R6
+31
+R67
+!i10b 1
+R68
+R69
+R70
+!i113 1
+R7
+R8
+Erom3
+R1
+R4
+R5
+R0
+Z71 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM3.vhd
+Z72 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM3.vhd
+l0
+L4
+VhAzjK53n;h22KlWRSenbc0
+!s100 k?n6`9^mDl1i3ZEGc1j0i1
+R6
+31
+Z73 !s110 1512087344
+!i10b 1
+Z74 !s108 1512087344.898000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM3.vhd|
+Z76 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM3.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R4
+R5
+DEx4 work 4 rom3 0 22 hAzjK53n;h22KlWRSenbc0
+l23
+L9
+V]1@5fX527I2bRhK]SVOb]1
+!s100 H>AXiY:;9VZ_jk?HCDL^92
+R6
+31
+R73
+!i10b 1
+R74
+R75
+R76
+!i113 1
+R7
+R8
+Erom4
+R1
+R4
+R5
+R0
+Z77 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM4.vhd
+Z78 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM4.vhd
+l0
+L4
+V=3doDOiQMWaA3Pog8`HkF3
+!s100 cYYoa7V8A5e]?Az5j1[@J1
+R6
+31
+R73
+!i10b 1
+Z79 !s108 1512087343.995000
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM4.vhd|
+Z81 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/ROM4.vhd|
+!i113 1
+R7
+R8
+Abehavioral
+R4
+R5
+DEx4 work 4 rom4 0 22 =3doDOiQMWaA3Pog8`HkF3
+l23
+L9
+VoUT<coo`_<ljl1?gM[6O>2
+!s100 04zK@MSJkD0_f0V_ml^Md3
+R6
+31
+R73
+!i10b 1
+R79
+R80
+R81
+!i113 1
+R7
+R8
+Etopo
+Z82 w1512085630
+Z83 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 F4?8H@AVP;^e9M1j^UT:m0
+Z84 DPx8 cyclonev 19 cyclonev_components 0 22 [oXPE7T5CiffkAjNK>1^_0
+Z85 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 h=WEPgg^KP4dRbKHbJLS:0
+Z86 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z87 DPx6 altera 11 dffeas_pack 0 22 UnfbeWGEe]KW7:DTn;?VS1
+Z88 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R4
+R5
+Z89 DPx6 altera 28 altera_primitives_components 0 22 ]KYk:P<?aKG^=ZNSeb8Pf3
+R0
+Z90 8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/simulation/modelsim/Jogo.vho
+Z91 FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/simulation/modelsim/Jogo.vho
+l0
+L39
+VK@@OMEz?0necKFDUfzEl^3
+!s100 Y0Hm5d1IKW^=YbSfZkF5m0
+R6
+32
+!s110 1512087566
+!i10b 1
+Z92 !s108 1512087566.840000
+Z93 !s90 -reportprogress|300|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/simulation/modelsim/Jogo.vho|
+Z94 !s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/simulation/modelsim/Jogo.vho|
+!i113 1
+Z95 o-work work
+R8
+Astructure
+R83
+R84
+R85
+R86
+R87
+R88
+R4
+R5
+R89
+DEx4 work 4 topo 0 22 K@@OMEz?0necKFDUfzEl^3
+l650
+L126
+VeJFS2Wl^`L=DSOm_^e<d40
+!s100 a5D5XV4j9;8JSmgD6]T8X3
+R6
+32
+!s110 1512087567
+!i10b 1
+R92
+R93
+R94
+!i113 1
+R95
+R8
+Abhv
+R2
+R3
+R4
+R5
+DEx4 work 4 topo 0 22 RS]9>RKhe]J=JXfZz@M4U0
+l53
+L17
+V>:6XTMi27FS11l`>NTI<U1
+!s100 3Y3:bf5V6^XN5@<d3I5jA0
+R6
+31
+!s110 1512087343
+!i10b 1
+!s108 1512087342.971000
+!s90 -reportprogress|300|-93|-work|work|C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/topo.vhd|
+!s107 C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/topo.vhd|
+!i113 1
+R7
+R8
+FC:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/topo.vhd
+R9
+8C:/Users/kkaldas/Documents/GitHub/Joguinho Clocks Reduzidos/topo.vhd
